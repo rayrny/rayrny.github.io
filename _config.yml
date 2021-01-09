@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Suji Kim"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "**Web/App** Developer & Designer"
+  bio              : "Web/App **Developer** & **Designer**"
   location         : "Seoul, South Korea"
   email            : "bion239@naver.com"
   links:
@@ -129,7 +129,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/jerimo"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -138,7 +138,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/_ray.moon"
 
 
 # Reading Files
