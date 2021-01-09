@@ -97,7 +97,7 @@ author:
   avatar           : "/assets/image/mimo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Web/App **Developer** & **Designer**"
   location         : "Seoul, South Korea"
-  email            : "bion239@naver.com"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
