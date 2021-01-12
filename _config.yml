@@ -116,7 +116,7 @@ author:
       url: "https://github.com/jerimo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/_ray.moon"
+    #  url: "https://instagram.com/_ray.moon"
 
 # Site Footer
 footer:
