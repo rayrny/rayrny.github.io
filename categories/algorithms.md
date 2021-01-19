@@ -1,8 +1,7 @@
 ---
 layout: category
-title: Ect.
-permalink: categories/ect/
-# hide: true
+title: Algorithm
+permalink: categories/algorithms/
 ---
 
 <div class="page clearfix">
