@@ -4,19 +4,26 @@ title: Algorithm
 permalink: categories/algorithm/
 ---
 
-<div>
-  {% for eachCategory in site.categories %}
-    <ul class="categories">
-      {% for categoryName in eachCategory[0] %}
-        {% if categoryName != null %}
-          <li>
-            <span><a href="/categories/{{ categoryName }}">
-              {{ categoryName }}
-            </a></span>
-            <span class="count">{{ eachCategory[1].size }}</span>
-          </li>
-        {% endif %}
+<div class="page clearfix">
+  <div class="left">
+    <h1>{{page.title}}</h1>
+    <hr>
+    <ul>
+      {% for category in site.categories %}
+      <h2 id="{{category | first}}">{{category | first}}</h2>
+      {% for posts in category %}
+      {% for post in posts %}
+      {% if post.url %}
+      <li>
+        <time>
+          {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
+        </time>
+        <a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
       {% endfor %}
     </ul>
-  {% endfor %}
+  </div>
 </div>
