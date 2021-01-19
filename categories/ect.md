@@ -1,8 +1,7 @@
 ---
 layout: category
 title: Ect.
-permalink: categories/ect/
-# hide: true
+permalink: /categories/ect
 ---
 
 <div class="page clearfix">

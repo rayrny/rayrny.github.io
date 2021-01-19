@@ -1,7 +1,7 @@
 ---
 layout: category
 title: Algorithm
-permalink: categories/algorithms/
+permalink: /categories/algorithms
 ---
 
 <div class="page clearfix">
