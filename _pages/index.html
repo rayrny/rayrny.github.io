@@ -2,12 +2,13 @@
 layout: page
 title: archive_index
 permalink: /_pages/
+author_profile: true
 ---
 
 {% if site.posts.size == 0 %}
   <h2> No Post Found </h2>
 {% endif %}
-<div style="margin: 150px;">
+<div style="margin: 300px;">
   {% for eachCategory in site.categories %}
     <ul class="categories">
       {% for categoryName in eachCategory[0] %}
