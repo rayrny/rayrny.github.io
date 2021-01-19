@@ -8,3 +8,9 @@ main:
     url: /categories/algorithm
   - title: "Ect."
     url: /categories/ect
+
+docs:
+  - title: "Algorithm"
+    children:
+      - title: "그리디"
+        url: _docs/algorithms/그리디
