@@ -6,7 +6,7 @@ main:
 #    url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Archive"
     #url: /category-archive/
-    url: /categories/index
+    url: /_pages/index
   - title: "Algorithm"
     url: /categories/algorithm
   - title: "Ect."
