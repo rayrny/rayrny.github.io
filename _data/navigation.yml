@@ -5,7 +5,7 @@ main:
   - title: "Archive"
     url: /_pages/index
   - title: "Algorithm"
-    url: /categories/algorithm
+    url: /categories/algorithms
   - title: "Ect."
     url: /categories/ect
 
