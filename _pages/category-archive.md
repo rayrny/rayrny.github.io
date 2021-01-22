@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Posts by Category"
-permalink: /category-archive/
+permalink: _pages/category-archive
 author_profile: true
 # sidebar_main: true
 ---
