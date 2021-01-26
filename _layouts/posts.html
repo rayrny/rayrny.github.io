@@ -4,17 +4,18 @@ layout: archive
 
 <header class="post-header">
    <!--<h1 class="post-title p-name" itemprop="name headline">{{ page.title }}</h1>-->
-   <p style="font-size:9px; color: gray;" class="post-meta">Posted on {{ page.date | date: "%b %-d, %Y" }}
+   <p style="font-size:11px; color: gray;" class="post-meta">Posted on {{ page.date | date: "%b %-d, %Y" }}
      {% if page.tags %}
      {% for tag in page.tags %}
      <a class="label">#{{ tag }}</a> &nbsp;
      {% endfor %}
      {% endif %}
-    </p>
+  </p>
 </header>
-
+<br>
+<br>
 {{ content }}
-
+<br>
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
