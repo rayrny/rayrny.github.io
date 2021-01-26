@@ -2,10 +2,10 @@
 main:
   - title: "Archive"
     url: /categories/
-  - title: "Tag"
-    url: /tags/
   - title: "Algorithm"
     url: /category/
+  - title: "Tag"
+    url: /tags/
 
 docs:
   - title: "Algorithm"
