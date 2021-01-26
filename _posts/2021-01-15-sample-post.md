@@ -11,3 +11,10 @@ author_profile: true
 
 # HI
 My first posting
+
+```python
+print("\    /"+ "\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \(__)|")
+```
