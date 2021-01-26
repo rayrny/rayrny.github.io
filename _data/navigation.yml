@@ -5,7 +5,7 @@ main:
   - title: "Algorithm"
     url: /category/
   - title: "Ect."
-    url: /category/ect
+    url: /category/
 
 docs:
   - title: "Algorithm"
