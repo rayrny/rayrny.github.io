@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Category"
-    url: _pages/category_archive
+    url: /categories/
   - title: "Archive"
     url: /_pages/index
   - title: "Algorithm"
