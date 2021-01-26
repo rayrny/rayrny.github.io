@@ -2,12 +2,12 @@
 layout: posts
 title: "Hello World!"
 category: ect
-last_modified_at:
+last_modified_at: 2021-01-26 13:34:00 +0900
 tags:
   - testing
   - Sample
 author_profile: true
 ---
 
-# Hello World!
+# HI
 My first posting
