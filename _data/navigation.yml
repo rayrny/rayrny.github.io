@@ -1,13 +1,11 @@
 # main links
 main:
-  - title: "Category"
-    url: /categories/
   - title: "Archive"
-    url: /_pages/index
+    url: /categories/
   - title: "Algorithm"
-    url: /categories/algorithms
+    url: /category/
   - title: "Ect."
-    url: /categories/ect
+    url: /category/ect
 
 docs:
   - title: "Algorithm"

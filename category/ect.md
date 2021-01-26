@@ -1,7 +1,7 @@
 ---
 layout: category
 title: Ect.
-permalink: /categories/ect
+permalink: /category/ect
 ---
 
 <div class="page clearfix">
