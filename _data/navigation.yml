@@ -4,8 +4,8 @@ main:
     url: /categories/
   - title: "Algorithm"
     url: /category/
-  - title: "Ect."
-    url: /category/
+  - title: "Tag"
+    url: /tags/
 
 docs:
   - title: "Algorithm"
