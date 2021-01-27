@@ -14,10 +14,11 @@ layout: archive
   <hr/>
 </header>
 <br>
-<br>
 {{ content }}
 <br>
 <br>
+
+<!--
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
@@ -30,7 +31,7 @@ layout: archive
 </ul>
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
-<!--{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% assign postsByYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy__section">
     <h2 class="archive__subtitle">{{ year.name }}</h2>
@@ -43,26 +44,9 @@ layout: archive
   </section>
 {% endfor %}-->
 
-{% for post in site.categories[page.title] %}
-   <ul calss="category">
-      {% if post.title != null %}
-        <li>
-          {% if post.link %}
-              <a href="{{ post.link }}">
-            {% else %}
-              <a href="{{ site.baseurl }} {{ post.url }}">
-            {% endif %}
-                {{ post.title }}
-              </a>
-              <time style="font-size: 12px;">{{ post.date | date: "%Y-%m-%d" }}</time>
-<!--
-               {% for tag in post.tags %}
-              <a id="categoryPostTag" class="tag" href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-                {{ tag }}
-              </a>
-                {% endfor %}
--->
-          </li>
-        {% endif %}
-    </ul>
-  {% endfor %}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
+</div>
+
+<a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
