@@ -25,13 +25,13 @@ layout: archive
                 {{ post.title }}
               </a>
               <time style="font-size: 12px;">{{ post.date | date: "%Y-%m-%d" }}</time>
-<!--
-               {% for tag in post.tags %}
-              <a id="categoryPostTag" class="tag" href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+              <br>
+              {% for tag in post.tags %}
+              <a style="font-size: 13px; color: #020B45; background-color: #E8E9F4;"
+                  id="categoryPostTag" class="tag" href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
                 {{ tag }}
               </a>
-                {% endfor %}
--->
+              {% endfor %}
           </li>
         {% endif %}
     </ul>
