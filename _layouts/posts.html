@@ -40,3 +40,27 @@ layout: archive
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}-->
+
+{% for post in site.categories[page.title] %}
+   <ul calss="category">
+      {% if post.title != null %}
+        <li>
+          {% if post.link %}
+              <a href="{{ post.link }}">
+            {% else %}
+              <a href="{{ site.baseurl }} {{ post.url }}">
+            {% endif %}
+                {{ post.title }}
+              </a>
+              <time style="font-size: 12px;">{{ post.date | date: "%Y-%m-%d" }}</time>
+<!--
+               {% for tag in post.tags %}
+              <a id="categoryPostTag" class="tag" href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+                {{ tag }}
+              </a>
+                {% endfor %}
+-->
+          </li>
+        {% endif %}
+    </ul>
+  {% endfor %}
