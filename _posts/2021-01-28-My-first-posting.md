@@ -2,10 +2,9 @@
 layout: posts
 category: ect.
 title: My first Post
-last_modified_at: 2021-01-28 12:48:23
+last_modified_at: 2021-01-28
 tags:
   - blog
-  - jekyll
 author_profile: true
 ---
 
