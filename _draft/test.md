@@ -2,7 +2,6 @@
 layout: posts
 category: ect.
 title: My first Post
-excerpt: *sample
 last_modified_at: 2021-01-28 12:48:23
 tags:
   - blog
