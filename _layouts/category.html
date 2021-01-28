@@ -21,9 +21,9 @@ layout: archive
           {% if post.link %}
               <a href="{{ post.link }}">
             {% else %}
-              <b><a href="{{ site.baseurl }} {{ post.url }}"></b>
+              <a href="{{ site.baseurl }} {{ post.url }}">
             {% endif %}
-                {{ post.title }}
+                <b>{{ post.title }}</b>
               </a>
               <time style="font-size: 12px;">{{ post.date | date: "%Y-%m-%d" }}</time>
               <br>
