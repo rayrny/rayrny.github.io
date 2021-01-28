@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Suji Kim"
   avatar           : "/assets/image/mimo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Web/App **Developer** & **Designer**\nSejong Univ."
+  bio              : "Web/App **Developer** & **Designer**\n\nSejong Univ.\n\n\n"
   location         : "Seoul, South Korea"
   email            : "bion239@naver.com"
   links:
