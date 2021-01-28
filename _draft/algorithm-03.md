@@ -1,0 +1,105 @@
+---
+layout: posts
+category: Algorithm
+title: [그리디] 큰 수의 법칙
+last_modified_at: 2021-01-28
+tags:
+  - 그리디
+  - algorithm
+  - 국가 교육기관 코딩테스트
+
+author_profile: true
+---
+
+# 큰 수의 법칙
+
+** 1번 문제인 거스름돈 문제는 간단해서 따로 리뷰하지 않음 (백준 5585번과 유사)
+
+- ![Image Alt 텍스트](/assets/image/03-2.png)
+
+
+소요시간: 약 12분
+
+0. 초기 코드:
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	int n, m, k = 0;
+	cin >> n >> m >> k;
+	int ar[1000] = { 0 };
+	int max = 2;
+	int maxIdx = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> ar[i];
+		if (max < ar[i]) {
+			max = ar[i]; // 최댓값 바로 찾음
+			maxIdx = i;
+		}
+	}
+
+	int rst = 0;
+	int max2 = 0;
+
+	for (int i = 1; i <= m; i++) {
+		if (i % (k + 1) == 0) { // k를 넘어가면
+			if (max2 == 0) { // max2가 없는 경우에만 구함
+				for (int j = 0; j < n; j++) {
+					if (j != maxIdx && max2 < ar[j]) {
+						max2 = ar[j];
+					}
+				}
+			}
+			rst += max2;
+		}
+		else {
+			rst += max;
+		}
+	}
+	cout << rst;
+
+	return 0;
+}
+```
+-----
+1. 개선할 점:
+* list의 정렬기능을 사용하여 j for문을 삭제하고 바로 두 번째로 큰 수 구할 수 있음
+* 반복되는 수열을 찾고 그 수열을 통채로 더하는 방법
+  -> 이를 통해 반복문 안쓰고 바로 곱하기만을 통해 답 구할 수 있음
+
+2. 수정된 코드:
+
+```c++
+#include <iostream>
+#include <string>
+#include <list>
+using namespace std;
+
+int main() {
+	int n, m, k = 0;
+	cin >> n >> m >> k;
+	int x = 0;
+	list<int> arr;
+	int max = 0;
+  int rst = 0;
+	int max2 = 0;
+
+	for (int i = 0; i < n; i++) {
+		cin >> x;
+		arr.push_back(x);
+	}
+	arr.sort();
+	max = arr.back();
+	arr.pop_back(); // vector와 다르게 데이터 접근 불가
+	max2 = arr.back();
+
+	int cnt = (m / (k + 1))*k + m % (k + 1);
+	rst += max * cnt;
+	rst += max2 * (m - cnt);
+	cout << rst;
+
+	return 0;
+}
+```
