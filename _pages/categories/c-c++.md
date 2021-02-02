@@ -4,7 +4,7 @@ title: C/C++
 permalink: /categories/c-c++
 ---
 
-<h2> C/C++ - {{ site.categories.c-c++ | size }} </h2>
+<h2> - {{ site.categories.c-c++ | size }} 개의 포스트 </h2>
 -----
 {% assign posts = site.categories.c-c++ %}
 

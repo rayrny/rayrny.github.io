@@ -4,9 +4,9 @@ title: Git Blog
 permalink: /categories/blog
 ---
 
-<h2> Ect. - {{ site.categories.ect | size }} </h2>
+<h2> - {{ site.categories.blog | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.ect %}
+{% assign posts = site.categories.blog %}
 
 
 {% for post in posts %}
