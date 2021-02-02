@@ -1,5 +1,5 @@
 ---
-layout: achive
+layout: archive
 title: C/C++
 permalink: /categories/c-c++
 ---
