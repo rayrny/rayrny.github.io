@@ -10,7 +10,6 @@ table {
   font-size: $type-size-6;
   border-collapse: collapse;
   overflow-x: auto;
-  background-color: #E8E9F4;
 
   & + table {
     margin-top: 1em;
@@ -18,7 +17,7 @@ table {
 }
 
 thead {
-  background-color: $border-color;
+  background-color: #E8E9F4 //$border-color;
   border-bottom: 2px solid mix(#000, $border-color, 25%);
 }
 

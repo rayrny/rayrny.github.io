@@ -7,8 +7,6 @@ main:
   - title: "Tag"
     url: /tags/
 
-docs:
-  - title: "Algorithm"
-    children:
-      - title: "그리디"
-        url: _docs/algorithms/그리디
+#sidebar
+sidebar-contents:
+  -title: 
