@@ -6,7 +6,7 @@ last_modified_at: 2021-02-01
 author_profile: true
 tags:
   - 프로그래밍 언어
-  - 문법
+  - C/C++
 toc: true
 toc_sticky: true
 ---
