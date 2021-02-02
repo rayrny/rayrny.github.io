@@ -12,4 +12,4 @@ sidebar-contents:
   - title: Algorithm
     children:
       - title: "그리디"
-      url: /categories/greedy
+        url: /categories/greedy
