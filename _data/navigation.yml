@@ -13,3 +13,7 @@ sidebar-contents:
     children:
       - title: "그리디"
         url: /categories/greedy
+  - title: Programming Language
+    children:
+      - title: "C/C++"
+        url: /categories/c-c++
