@@ -8,9 +8,9 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-<h2> - {{ site.categories.C | size }} 개의 포스트 </h2>
+<h2> - {{ site.categories.C언어 | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.C %}
+{% assign posts = site.categories.C언어 %}
 
 
 {% for post in posts %}
