@@ -1,7 +1,8 @@
 ---
 layout: posts
 title: "[C/C++] 변수의 표현 범위"
-category: C/C++
+categories:
+  - C/C++
 last_modified_at: 2021-02-01
 author_profile: true
 tags:

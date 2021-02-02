@@ -15,8 +15,6 @@ sidebar-contents:
         url: /categories/boj
       - title: "'이것이 코딩테스트다'"
         url: /categories/coding-test
-      - title: "C/C++"
-        url: /categories/c-c++ 
   - title: Programming Language
     children:
       - title: "C/C++"
