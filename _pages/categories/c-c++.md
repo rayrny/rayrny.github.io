@@ -2,6 +2,10 @@
 layout: archive
 title: C/C++
 permalink: /categories/c-c++
+author_profile: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
 ---
 
 <h2> - {{ site.categories.c-c++ | size }} 개의 포스트 </h2>

@@ -2,11 +2,15 @@
 layout: archive
 title: 백준
 permalink: /categories/boj
+author_profile: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
 ---
 
-<h2> - {{ site.categories.boj | size }} 개의 포스트 </h2>
+<h2> - {{ site.categories.BOJ | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.boj %}
+{% assign posts = site.categories.BOJ %}
 
 
 {% for post in posts %}

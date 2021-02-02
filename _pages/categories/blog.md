@@ -1,7 +1,11 @@
 ---
-layout: achive
+layout: archive
 title: Git Blog
 permalink: /categories/blog
+author_profile: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
 ---
 
 <h2> - {{ site.categories.blog | size }} 개의 포스트 </h2>
