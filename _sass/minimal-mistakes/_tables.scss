@@ -10,6 +10,7 @@ table {
   font-size: $type-size-6;
   border-collapse: collapse;
   overflow-x: auto;
+  background-color: #E8E9F4;
 
   & + table {
     margin-top: 1em;
