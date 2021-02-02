@@ -13,7 +13,13 @@ sidebar-contents:
     children:
       - title: "백준"
         url: /categories/boj
+      - title: "'이것이 코딩테스트다'"
+        url: /categories/coding-test
   - title: Programming Language
     children:
       - title: "C/C++"
         url: /categories/c-c++
+  - title: Ect.
+    children:
+      - title: "blog"
+        url: /categories/blog

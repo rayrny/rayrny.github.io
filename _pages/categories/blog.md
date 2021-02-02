@@ -1,7 +1,7 @@
 ---
 layout: achive
-title: Ect.
-permalink: /categories/ect
+title: Git Blog
+permalink: /categories/blog
 ---
 
 <h2> Ect. - {{ site.categories.ect | size }} </h2>
