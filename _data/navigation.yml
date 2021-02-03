@@ -15,11 +15,21 @@ sidebar-contents:
         url: /categories/boj
       - title: "'이것이 코딩테스트다'"
         url: /categories/coding-test
+  - title: Project
+    children:
+      - title: "Save the Bahehek!"
+        url: 
+      - title: "여행 검색 및 예약 서비스"
+        url:
+      - title: "Graph 데이터베이스 구축"
+        url:
   - title: Programming Language
     children:
       - title: "C/C++"
         url: /categories/c-c++
   - title: Ect.
     children:
-      - title: "blog"
+      - title: "Github"
+        url: /categories/github
+      - title: "Git Blog"
         url: /categories/blog
