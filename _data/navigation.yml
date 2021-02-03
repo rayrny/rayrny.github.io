@@ -17,11 +17,11 @@ sidebar-contents:
         url: /categories/coding-test
   - title: Project
     children:
-      - title: "Save the Bahehek!"
-        url: 
-      - title: "여행 검색 및 예약 서비스"
+      - title: "- Save the Bahehek!"
         url:
-      - title: "Graph 데이터베이스 구축"
+      - title: "- 여행 검색 및 예약 서비스"
+        url:
+      - title: "- Graph 데이터베이스 구축"
         url:
   - title: Programming Language
     children:

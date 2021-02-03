@@ -11,6 +11,9 @@ tags:
   - C/C++
 toc: true
 toc_sticky: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
 ---
 
 ## C/C++에서 변수 표현 범위
