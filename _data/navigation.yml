@@ -18,11 +18,11 @@ sidebar-contents:
   - title: Project
     children:
       - title: "- Save the Bahehek!"
-        url:
+        url: /categories/project-webgame
       - title: "- 여행 검색 및 예약 서비스"
-        url:
+        url: /categories/project-travel
       - title: "- Graph 데이터베이스 구축"
-        url:
+        url: /categories/project-db
   - title: Programming Language
     children:
       - title: "C/C++"
