@@ -17,7 +17,7 @@ sidebar-contents:
         url: /categories/coding-test
   - title: Project
     children:
-      - title: "- Save the Bahehek!"
+      - title: "- 바흐흑을 구해죠바흐흑!"
         url: /categories/project-webgame
       - title: "- 여행 검색 및 예약 서비스"
         url: /categories/project-travel

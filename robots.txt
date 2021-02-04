@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://jerimo.github.io/sitemap.xml
