@@ -8,9 +8,9 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-<h2> - {{ site.categories.Algorithm | size }} 개의 포스트 </h2>
+<h2> - {{ site.categories.CodingTest | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.Algorithm %}
+{% assign posts = site.categories.CodingTest %}
 
 
 {% for post in posts %}
