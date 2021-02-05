@@ -13,9 +13,10 @@
     {% include head.html %}
     {% include head/custom.html %}
 
-    <!-- 검색 아이콘 추가 -->
+    <!-- 검색 아이콘 추가
     <a href="/search/"><img src="/assets/image/search.png" /></a>
-    
+    -->
+
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
