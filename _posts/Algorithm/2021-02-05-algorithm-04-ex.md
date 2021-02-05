@@ -3,7 +3,7 @@ layout: posts
 title: "[구현] Ch04-예제"
 categories:
   - Algorithm
-  - CodigTest
+  - CodingTest
 last_modified_at: 2021-02-05
 author_profile: true
 tags:

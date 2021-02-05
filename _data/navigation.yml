@@ -15,7 +15,7 @@ sidebar-contents:
         url: /categories/boj
       - title: "'이것이 코딩테스트다'"
         url: /categories/coding-test
-  - title: Project
+  - title: Toy Project
     children:
       - title: "- 바흐흑을 구해죠바흐흑!"
         url: /categories/project-webgame
