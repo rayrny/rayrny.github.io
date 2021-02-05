@@ -1,7 +1,9 @@
 ---
 layout: posts
 title: "[구현] Ch04-예제"
-category: Algorithm
+categories:
+  - Algorithm
+  - CodigTest
 last_modified_at: 2021-02-05
 author_profile: true
 tags:
