@@ -1,14 +1,19 @@
 ---
 layout: posts
-title: "[백준 0000번] 문제 이름"
-# excerpt: *미리보기에 표시될 내용
-category: Algorithm
-last_modified_at: 2021-01-28
+title: "[백준] 0000 문제이름"
+categories:
+  - BOJ
+last_modified_at: 2021-02-01
 author_profile: true
 tags:
-  - 동적프로그래밍
-  - 알고리즘
+  - 수학
   - 백준
+  - Algorithm
+toc: true
+toc_sticky: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
 ---
 
 
