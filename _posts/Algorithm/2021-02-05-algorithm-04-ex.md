@@ -117,3 +117,8 @@ int main() {
 	return 0;
 }
 ```
+
+# 예제 4-2| 시각
+
+이 문제는 백준 18312번과 동일하므로 링크 따로 첨부함
+-<a href="https://jerimo.github.io/algorithm/gcd/">[백준] 18312 시각</a>
