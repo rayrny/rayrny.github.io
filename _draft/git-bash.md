@@ -56,3 +56,5 @@ git branch (이름 적으면 바로 생성됨)
 
 브랜치 이동하는거
 add. status commit push 이거 정리
+풀도 정리
+풀리퀘 하는것도..
