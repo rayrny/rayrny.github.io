@@ -68,3 +68,8 @@ $ git push origin 브랜치_이름
 ### | git pull
 
 만약 협업을 하는 경우 현재 working directory와 원격 저장소의 내용이 다를 수 있다. 이때 내 working directory를 최신으로 업데이트 하는 것이 ```pull```이다. ```pull = fetch + merge```이므로 나는 pull을 더 자주 사용한다.
+```
+$ git pull origin master
+```
+
+에러가 뜨긴 했지만 git bash 종료 후 다시 들어가니 내역이 잘 업데이트 되긴 했다..
