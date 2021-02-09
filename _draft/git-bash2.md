@@ -3,7 +3,7 @@ layout: posts
 title: "[Git] Git Bash 명령어와 사용법 1"
 categories:
   - Github
-last_modified_at: 2021-02-08
+last_modified_at: 2021-02-09
 author_profile: true
 tags:
   - jekyll
@@ -55,3 +55,16 @@ staging영역에 올라간 파일들은 commit 메시지를 적고 나면 push �
 ```
 $ git commit -m "커밋 내용"
 ```
+
+### | git push
+commit message를 적은 후에는 push하고자 하는 브랜치에 푸쉬할수 있다.
+
+```
+$ git push origin 브랜치_이름
+```
+여기까지 하면 푸쉬가 끝난다. 이후 리포지토리에 들어가 푸쉬가 잘 됐는지 확인해 보자.
+
+
+### | git pull
+
+```pull = fetch + merge```이므로 나는 pull을 더 자주 사용한다.

@@ -17,7 +17,7 @@ sidebar:
 ---
 
 # 2020.DatabaseProject - 여행 검색 및 예약 서비스
-<br>
+
 <small>Git Repository ></small> <a href="https://github.com/jerimo/2020.DatabaseProject.git">https://github.com/jerimo/2020.DatabaseProject.git</a><br><br>
 *임시로 TravelService의 약자인 TS로 머릿말 표기. 적절한 명칭이 생기면 변경할 예정* <br><br>
 사실 원래 아이디어는 ```'Mining'```에서 시작함. 이후 이를 보완하거나 새롭게 마이닝을 개발할 예정이다.
