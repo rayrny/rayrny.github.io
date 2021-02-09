@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[TS] 여행 검색 및 예약 서비스 개요 2"
+title: "[TS] 여행 검색 및 예약 서비스 개요 1"
 categories:
   - DBProject
 last_modified_at: 2021-02-09
