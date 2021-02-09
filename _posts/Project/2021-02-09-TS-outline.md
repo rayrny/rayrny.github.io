@@ -1,13 +1,14 @@
 ---
 layout: posts
-title: "[TS] 여행 검색 및 예약 서비스 개요 1"
+title: "[TS] 여행 검색 및 예약 서비스 개요 2"
 categories:
-  - GitBlog
+  - DBProject
 last_modified_at: 2021-02-09
 author_profile: true
 tags:
-  - jekyll
-  - minimal-mistakes
+  - Mysql
+  - PHP
+  - apache24
 toc: true
 toc_sticky: true
 sidebar:
