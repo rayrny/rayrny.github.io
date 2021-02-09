@@ -9,8 +9,8 @@ tags:
   - Mysql
   - PHP
   - apache24
-toc: true
-toc_sticky: true
+toc : true
+toc_sticky : true
 sidebar:
   title: Posts
   nav: "sidebar-contents"
