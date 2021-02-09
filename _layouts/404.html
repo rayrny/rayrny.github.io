@@ -1,0 +1,40 @@
+---
+layout: page
+title: "Page Not Found"
+excerpt: "Page not found. Your pixels are in another canvas."
+sitemap: false
+permalink: /404.html
+author_profile: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
+---
+
+<h2> Sorry, but the page you were trying to view does not exist. </h2>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+
+    <!-- 검색 아이콘 추가
+    <a href="/search/"><img src="/assets/image/search.png" /></a>
+    -->
+
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+
+    <h2> Sorry, but the page you were trying to view does not exist. </h2>
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+
+  </body>
+</html>
