@@ -22,7 +22,7 @@ sidebar:
 ### | git add
 
 #### staging 영역에 올리기
-먼저 working directory 상에서의 변경된 내용을 staging 영역에 추가하기 위해,
+먼저 working directory(Local) 상에서의 변경된 내용을 staging 영역에 추가하기 위해,
 <mark style='background-color: #f5f0ff'>git add</mark> 명령어를 사용한다.
 
 ```
