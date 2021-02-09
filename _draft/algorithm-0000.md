@@ -18,6 +18,8 @@ sidebar:
 
 <mark style='background-color: #f5f0ff'> </mark>
 
+<a href="https://jerimo.github.io/algorithm/gcd/">[알고리즘] GCD와 LCM</a>
+
 # 0000번
 
 ```C++
