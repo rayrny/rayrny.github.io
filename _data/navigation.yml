@@ -3,7 +3,7 @@ main:
   - title: "Archive"
     url: /categories/
   - title: "Algorithm"
-    url: /category/algorithm
+    url: /category/
   - title: "Tag"
     url: /tags/
 
