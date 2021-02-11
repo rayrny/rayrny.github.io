@@ -21,7 +21,7 @@ sidebar:
 -----
 
 - 코드 다운 <a href="https://github.com/jerimo/2020.DatabaseProject.git">https://github.com/jerimo/2020.DatabaseProject.git</a><br>
-![코드 다운](/assets/image/git-remote.png){: width="300" height="300"}
+![코드 다운](/assets/image/ts/code.png){: width="300" height="300"}<br>
 <small>Download ZIP 클릭!</small>
 
 ### 🍀 사용방법
