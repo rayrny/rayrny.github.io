@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "서비스 소개 및 이용 방법"
+title: "여행 검색 및 예약 서비스 이용하기"
 categories:
   - DBProject
 last_modified_at: 2021-02-11
