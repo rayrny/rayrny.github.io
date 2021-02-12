@@ -23,7 +23,7 @@ sidebar:
 
 이처럼 범위를 반으로 줄여가며 탐색을 반복하므로 속도가 빠른 편이다. 시간 복잡도는 ```O(logN)```이다.
 
-![이진 탐색](/assets/image/bs.png)
+![이진 탐색](/assets/image/binary.png)
 
 ### 각 sorting의 시간 복잡도를 비교해 보자!
 
