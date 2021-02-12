@@ -7,6 +7,7 @@ last_modified_at: 2021-02-12
 author_profile: true
 tags:
   - C/C++
+  - 이진 탐색
 toc: true
 toc_sticky: true
 sidebar:
