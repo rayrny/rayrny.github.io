@@ -25,7 +25,7 @@ sidebar:
 
 ### 각 sorting의 시간 복잡도를 비교해 보자!
 
-|이름||평균|최악|안정성|
+|이름|평균|최악|안정성|
 |------|---|---|---|
 |버블 정렬|n<sup>2</sup>|n<sup>2</sup>|true|
 |선택 정렬|n<sup>2</sup>|n<sup>2</sup>|false|
@@ -38,7 +38,7 @@ sidebar:
 
 -----
 
-```
+```c++
 vector<int> v;
 
 int binarySearch(int len, int x) {
