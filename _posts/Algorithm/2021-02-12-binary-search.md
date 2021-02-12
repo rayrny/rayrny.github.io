@@ -26,7 +26,7 @@ sidebar:
 ### 각 sorting의 시간 복잡도를 비교해 보자!
 
 |이름|평균|최악|안정성|
-|------|---|---|---|
+|--------|-----|-----|-----|
 |버블 정렬|n<sup>2</sup>|n<sup>2</sup>|true|
 |선택 정렬|n<sup>2</sup>|n<sup>2</sup>|false|
 |삽입 정렬|n<sup>2</sup>|n<sup>2</sup>|true|
@@ -60,6 +60,8 @@ int binarySearch(int len, int x) {
 	return 0;
 }
 ```
+
+![이진 탐색](/assets/image/bs.png)
 
 배열 v의 길이를 len이라 하고, x는 찾고자 하는 데이터의 값이다. 먼저, 왼쪽과 오른쪽의 범위를 구분지어 줄 변수인 ```lo```와 ```hi```를 초기화한다.
 
