@@ -36,8 +36,13 @@ sidebar:
 ![2](/assets/image/apache0.PNG)
 4. Go to Application 또는 검색창에 localhost를 치면 메인 화면으로 접속할 수 있다.
 ![3](/assets/image/apache1.PNG)
+
+### 🐱 서비스 소개
+
+-----
+
 ![로그인](/assets/image/ts/login1.PNG)
-5. 회원이 아니라면 우선 회원가입을 진행한다.
+ 회원이 아니라면 우선 회원가입을 진행한다.
 ![회원가입](/assets/image/ts/signup1-2.PNG)
 6. 메인화면에서 가고자 하는 나라이름을 검색하거나, 원하는 테마가 있다면 선택한다. 나라와 테마를 모두 선택하여 검색할 수 있다. 나라이름은 정확하게 입력해야 한다.
 ![메인](/assets/image/ts/main2.PNG)
@@ -49,9 +54,7 @@ sidebar:
     - 나라, 테마 모두 검색
       ![결과3](/assets/image/ts/search3.PNG)
 
-### 🐱 서비스 소개
 
------
 
 - 로그인
   + 회원가입이 되어있지 않다면, 우선 회원가입을 진행한다.
