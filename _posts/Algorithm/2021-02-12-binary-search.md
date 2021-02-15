@@ -38,6 +38,9 @@ sidebar:
 |힙 정렬|nlog(n)|nlog(n)|false|
 |병합 정렬|nlog(n)|nlog(n)|true|
 
+
+❕ ```algorithm``` 의 ```sort```는 퀵 정렬을 기반으로 구현된 함수이다.
+
 ### 코드를 살펴보며 동작 방법을 분석해 보자.
 
 -----
