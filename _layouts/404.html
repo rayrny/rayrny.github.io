@@ -10,7 +10,11 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-<h2> Sorry, but the page you were trying to view does not exist. </h2>
+<div id="main" role="main">
+  {% include sidebar.html %}
+</div>
+
+
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
@@ -24,7 +28,7 @@ sidebar:
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
-    <h2> Sorry, but the page you were trying to view does not exist. </h2>
+      <h2> Sorry, but the page you were trying to view does not exist. </h2>
 
     <div id="footer" class="page__footer">
       <footer>
