@@ -22,7 +22,7 @@ sidebar-contents:
       - title: "- 여행 검색 및 예약 서비스"
         url: /categories/project-travel
       - title: "- Graph 데이터베이스 구축"
-        url: /categories/project-db
+        url: /categories/project-graph
   - title: Programming Language
     children:
       - title: "C/C++"
