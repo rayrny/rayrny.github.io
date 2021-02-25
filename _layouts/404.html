@@ -10,19 +10,16 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-</div>
-
 
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+
+  <div id="main" role="main">
+    {% include sidebar.html %}
+  </div>
+  
   <head>
     {% include head.html %}
     {% include head/custom.html %}
-
-    <!-- 검색 아이콘 추가
-    <a href="/search/"><img src="/assets/image/search.png" /></a>
-    -->
 
   </head>
 
