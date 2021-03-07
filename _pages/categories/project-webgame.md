@@ -8,7 +8,7 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-<h2> - {{ site.categories.DBProject | size }} 개의 포스트 </h2>
+<h2> - {{ site.categories.WebGame | size }} 개의 포스트 </h2>
 -----
 {% assign posts = site.categories.DBProject %}
 
