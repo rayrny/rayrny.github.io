@@ -10,7 +10,7 @@ sidebar:
 
 <h2> - {{ site.categories.WebGame | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.DBProject %}
+{% assign posts = site.categories.WebGame %}
 
 
 {% for post in posts %}
