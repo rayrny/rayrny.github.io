@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "👾 바흐흑을 구해죠바흐흑"
+title: "👾 바흐흑을 구해죠바흐흑 - 게임 진행"
 categories:
   - WebGame
 last_modified_at: 2021-03-07
