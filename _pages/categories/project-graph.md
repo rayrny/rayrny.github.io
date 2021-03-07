@@ -8,9 +8,9 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-<h2> - {{ site.categories.DBProject | size }} 개의 포스트 </h2>
+<h2> - {{ site.categories.GraphProject | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.DBProject %}
+{% assign posts = site.categories.GraphProject %}
 
 
 {% for post in posts %}
