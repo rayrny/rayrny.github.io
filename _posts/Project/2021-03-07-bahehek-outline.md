@@ -10,6 +10,8 @@ tags:
   - HTML
 toc : true
 toc_sticky : true
+header:
+  teaser: /assets/images/bahehek/teaser.PNG
 sidebar:
   title: Posts
   nav: "sidebar-contents"
