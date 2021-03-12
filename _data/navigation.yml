@@ -27,6 +27,8 @@ sidebar-contents:
     children:
       - title: "C/C++"
         url: /categories/c-c++
+      - title: "Django"
+        url: /categories/django
   - title: Ect.
     children:
       - title: "Github"
