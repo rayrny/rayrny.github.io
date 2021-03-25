@@ -25,7 +25,7 @@ sidebar-contents:
       - title: "- Graph 데이터베이스 구축"
         url: /categories/project-graph
 
-  - title: WEB FRAMEWORK
+  - title: Web FrameWork
     children:
       - title: "React"
         url: /categories/react
