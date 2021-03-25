@@ -23,6 +23,12 @@ sidebar-contents:
         url: /categories/project-travel
       - title: "- Graph 데이터베이스 구축"
         url: /categories/project-graph
+  - title: WEB FRAMEWORK
+    children:
+      - title: "React"
+        url: /categories/react
+      - title: "Django"
+        url: /categories/django
   - title: Programming Language
     children:
       - title: "C/C++"
