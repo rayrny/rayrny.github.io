@@ -15,6 +15,7 @@ sidebar-contents:
         url: /categories/boj
       - title: "'이것이 코딩테스트다'"
         url: /categories/coding-test
+        
   - title: Toy Project
     children:
       - title: "- 바흐흑을 구해죠바흐흑!"
@@ -23,18 +24,19 @@ sidebar-contents:
         url: /categories/project-travel
       - title: "- Graph 데이터베이스 구축"
         url: /categories/project-graph
+
   - title: WEB FRAMEWORK
     children:
       - title: "React"
         url: /categories/react
       - title: "Django"
         url: /categories/django
+
   - title: Programming Language
     children:
       - title: "C/C++"
         url: /categories/c-c++
-      - title: "Django"
-        url: /categories/django
+
   - title: Ect.
     children:
       - title: "Github"
