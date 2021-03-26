@@ -59,3 +59,13 @@ python manage.py runserver
 이후 나오는 결과를 보면 ```http://127.0.0.1:8000```를 확인할 수 있는데, 웹 브라우저 주소창에 ```127.0.0.1:8000 또는 localhost:8000```를 치면 아래의 화면이 나타나고 정상적으로 프로젝트 생성이 되었음을 확인할 수 있다.
 
 ![Django](/assets/image/django4.PNG)
+
+
+#### 앱 만들기
+
+![Django](/assets/image/django_app.PNG)
+
+위의 명령어를 입력하면 프로젝트 내부에 앱을 만들 수 있다.
+
+
+![Django](/assets/image/django_app2.PNG)
