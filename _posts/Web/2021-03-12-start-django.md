@@ -63,9 +63,15 @@ python manage.py runserver
 
 #### 앱 만들기
 
+
+
+```
+python manage.py startapp 앱_이름
+```
+위의 명령어를 입력하면 프로젝트 내부에 앱을 만들 수 있다.
+
 ![Django](/assets/image/django_app.PNG)
 
-위의 명령어를 입력하면 프로젝트 내부에 앱을 만들 수 있다.
 
 
 ![Django](/assets/image/django_app2.PNG)
