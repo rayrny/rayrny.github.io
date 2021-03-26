@@ -60,7 +60,7 @@ INSTALLED_APPS = [
 
 다음으로 루트폴더의 urls.py에 경로를 등록하자.
 
-```django1
+```django
 # mysite/urls.py
 
 from django.contrib import admin
@@ -75,7 +75,7 @@ urlpatterns = [
 
 path의 첫 번째 인자에 오는 것이 ```localhost:8000/```뒤에 붙는 경로이다. 뒤에 include함수를 적는 것은
 url을 효율적으로 관리하기 위함인데, ```account/login```과 같이 앱 단위로 묶어주면 코드도 보기 편하고 관리하기도 쉽다.
-<br>
+<br><br>
 따라서 각각의 앱 내부에 ```urls.py```파일을 만들고 해당 앱에서 사용할 경로를 작성하자.
 ```django
 # account/urls.py
