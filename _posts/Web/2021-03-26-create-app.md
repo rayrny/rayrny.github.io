@@ -91,3 +91,7 @@ urlpatterns = [
 ]
 ```
 여기에 적어준 url들을 모두 포함시키는 것이 바로 ```include('account.urls')```이다.
+
+
+<br>
+<small>마크다운 코드블럭에서 장고는 지원을 안해준다 😢</small>
