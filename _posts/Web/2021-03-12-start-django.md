@@ -69,3 +69,5 @@ python manage.py runserver
 
 
 ![Django](/assets/image/django_app2.PNG)
+
+*터미널은 vs코드의 터미널을 사용 (cmd창 아님)
