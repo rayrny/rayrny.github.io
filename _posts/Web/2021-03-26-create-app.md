@@ -60,7 +60,9 @@ INSTALLED_APPS = [
 
 다음으로 루트폴더의 urls.py에 경로를 등록하자.
 
-```django
+```Django
+# mysite/urls.py
+
 from django.contrib import admin
 from django.urls import include, path
 
