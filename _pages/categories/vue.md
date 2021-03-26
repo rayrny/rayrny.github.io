@@ -1,16 +1,16 @@
 ---
 layout: archive
-title: React
-permalink: /categories/react
+title: Vue
+permalink: /categories/vue
 author_profile: true
 sidebar:
   title: Posts
   nav: "sidebar-contents"
 ---
 
-<h2> - {{ site.categories.React | size }} 개의 포스트 </h2>
+<h2> - {{ site.categories.Vue | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.React %}
+{% assign posts = site.categories.Vue %}
 
 
 {% for post in posts %}

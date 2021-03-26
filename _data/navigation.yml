@@ -15,7 +15,7 @@ sidebar-contents:
         url: /categories/boj
       - title: "'이것이 코딩테스트다'"
         url: /categories/coding-test
-        
+
   - title: Toy Project
     children:
       - title: "- 바흐흑을 구해죠바흐흑!"
@@ -27,10 +27,10 @@ sidebar-contents:
 
   - title: Web
     children:
-      - title: "React"
-        url: /categories/react
       - title: "Django"
         url: /categories/django
+      - title: "Vue"
+        url: /categories/vue
 
   - title: Programming Language
     children:
