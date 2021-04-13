@@ -27,8 +27,8 @@ sidebar-contents:
 
   - title: Web
     children:
-      - title: "Django"
-        url: /categories/django
+      - title: "Vue"
+        url: /categories/vue
 
   - title: Programming Language
     children:
