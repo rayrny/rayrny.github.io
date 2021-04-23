@@ -34,6 +34,8 @@ sidebar-contents:
     children:
       - title: "C/C++"
         url: /categories/c-c++
+      - title: "Python"
+        url: /categories/python
 
   - title: Ect.
     children:
