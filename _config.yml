@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Ray"
   avatar           : "/assets/image/mimo1.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "배우는 것을 좋아하는 개발자,\n\nWeb/App **Developer** & **Designer**"
+  bio              : "배우는 것을 좋아하는 개발자,\nWeb/App **Developer** & **Designer**"
   location         : "Seoul, South Korea"
   email            : "bion239@naver.com"
   links:
