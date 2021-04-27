@@ -10,7 +10,7 @@ sidebar:
 
 <h2> - {{ site.categories.Python | size }} 개의 포스트 </h2>
 -----
-{% assign posts = site.categories.python %}
+{% assign posts = site.categories.Python %}
 
 
 {% for post in posts %}
