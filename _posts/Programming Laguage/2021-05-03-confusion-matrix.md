@@ -15,7 +15,7 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-### Confusion matrx를 사용해 분류 모델의 성능을 알아보자.
+## Confusion matrx를 사용해 분류 모델의 성능을 알아보자.
 
 
 
