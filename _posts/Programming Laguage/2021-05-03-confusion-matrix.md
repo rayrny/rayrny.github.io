@@ -60,3 +60,7 @@ plot.ax_.set_title('Confusion Matrix')
 
 ![2](/assets/image/true.PNG)
 
+
+공식 문서를 참고하면, 'true'는 row 기준, 'pred'는 column기준으로 정규화 된다고 한다. 
+
+![3](/assets/image/nomalize.PNG)
