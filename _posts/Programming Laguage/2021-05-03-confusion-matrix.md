@@ -24,9 +24,9 @@ sidebar:
 ```confusion_matrix(y_true, y_pred)```을 통해서 단순하게 결과값을 배열의 형태로 얻을 수 있지만, 여기서 좀 더 나아가 시각화까지 시도해보자! 🌈
 
 ```python
-from sklearn.svm import SVC
+#from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+#from sklearn.metrics import accuracy_score
 
 # 학습 데이터와 훈련 데이터 split
 X_train, X_test, y_train, y_test = train_test_split(dataset, y, test_size = 0.2, random_state = 42, shuffle = True)
@@ -34,14 +34,14 @@ X_train, X_test, y_train, y_test = train_test_split(dataset, y, test_size = 0.2,
 # confusion matrix
 from sklearn.metrics import confusion_matrix, plot_confusion_matrix
 import matplotlib.pyplot as plt
-import pandas as pd
-labels=['anger', 'happiness', 'fear', 'sadness', 'neutral'] # 라벨 설정
-disp = plot_confusion_matrix(clf, # 분류 모델
+
+label=['anger', 'happiness', 'fear', 'sadness', 'neutral'] # 라벨 설정
+plot = plot_confusion_matrix(clf, # 분류 모델
                              X_test_scaled, y_test, # 예측 데이터와 예측값의 정답(y_true)
-                             display_labels=labels, # 표에 표시할 labels
+                             display_labels=label, # 표에 표시할 labels
                              cmap=plt.cm.Blue, # 컬러맵(plt.cm.Reds, plt.cm.rainbow 등이 있음)
                              normalize=None)
-disp.ax_.set_title('Confusion Matrix')
+plot.ax_.set_title('Confusion Matrix')
 ```
 -----
 
