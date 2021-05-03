@@ -15,9 +15,7 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-## Confusion matrx를 사용해 분류 모델의 성능을 알아보자.
-
-
+## Confusion matrix를 사용해 분류 모델의 성능을 알아보자.
 
 우선 confusion matix를 간단하게 설명하자면, 모델의 예측값과 결과값이 얼마나 일치하는지를 나타내는 표이다. **좌상단에서 우하단으로 가는 대각선의 값이 높을수록** 예측을 잘 이루어졌다는 의미다.
 
@@ -40,7 +38,7 @@ plot = plot_confusion_matrix(clf, # 분류 모델
                              X_test_scaled, y_test, # 예측 데이터와 예측값의 정답(y_true)
                              display_labels=label, # 표에 표시할 labels
                              cmap=plt.cm.Blue, # 컬러맵(plt.cm.Reds, plt.cm.rainbow 등이 있음)
-                             normalize=None)
+                             normalize=None) # 'true', 'pred', 'all' 중에서 지정 가능. default=None
 plot.ax_.set_title('Confusion Matrix')
 ```
 -----
@@ -53,4 +51,12 @@ plot.ax_.set_title('Confusion Matrix')
 첫 번째 row를 보면 anger 데이터에 대해 anger라고 **옳게 예측한 개수가 60개**, [happiness, fear, sadness, neutral]이라고 예측한 경우, 즉 틀리게 예측한 경우가 각각 4, 9, 0, 1개라는 의미이다. 
 
 따라서 위에서 말한 것과 같이 대각선에 위치한 값이 높게 나와야 예측이 잘 된다고 볼 수 있다.
+
+
+#### 🎶 정규화
+
+```plot_confusion_matrix()```의 인자 중에서, ```nomalize='true'```로 설정하면 말 그대로 정규화를 할 수 있다. 위에서는 개수로 표현된 값이 좀 더 보기 편하게 퍼센트화 된다.
+
+
+![2](/assets/image/true.PNG)
 
