@@ -71,9 +71,8 @@ const router = createRouter({
 })
 
 export default router
-
 ```
-위와 같이 설정해주면 라우터를 사용할 준비가 끝났다.
+위와 같이 설정해주면 라우터를 사용할 준비가 끝났다. ```export default router```를 꼭 적어주자! 처음에 빼먹었었는데 계속해서 오류가 나서 한시간을 넘게 헤맸다.. ㅎ
 
 이후 만들어둔 뷰 컴포넌트를 모두 등록해주자.
 
