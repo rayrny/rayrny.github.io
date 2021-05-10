@@ -45,8 +45,7 @@ src
 // main.js
 import { createApp } from 'vue'
 import App from './App.vue'
-// router 등록!
-import router from './router'
+import router from './router' // router 등록!
 
 createApp(App).use(router).mount('#app')
 ```
@@ -60,6 +59,7 @@ createApp(App).use(router).mount('#app')
 먼저 라우터를 생성하기 위해서는 vue-router에서 ```createRouter, createWebHistory```라는 함수를 import 해야한다. (vue 3버전부터 방식이 조금 바뀐걸로 알고있다.) 
 
 ```javascript
+// router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 
 // 경로 지정
@@ -116,7 +116,7 @@ mypage에 따로 주석처리가 되어있는 부분은 네비게이션 가드�
 
 먼저, ```App.vue```에서 라우터를 통해 전환할 부분을 명시해 주자.
 
-```javascript
+```HTML
 // App.vue
 <template>
   <div id="nav">
@@ -138,17 +138,20 @@ mypage에 따로 주석처리가 되어있는 부분은 네비게이션 가드�
 **페이지 내에서 이동을 할 경우**에는, ```router-link```를 통해 특정 링크로 이동할 수 있다.
 
 위의 코드에 잠시 등장했던 Header.vue를 살펴보자.
-```javascript
+```HTML
 // Header.vue
 <template>
     <div id='header'> 
         <div id='menuWrap'>
         <router-link to="/">Home</router-link> |
-        <router-link to="/login">Login</router-link>
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/mypage">Mypage</router-link>
         </div>
     </div>
 </template>
 ```
+
+![Header](/assets/image/menuWrap.PNG)
 
 헤더에는 ```'menuWrap'```으로 묶인 상단 메뉴바가 있는데, 각각 Home과 Login으로 이동할 수 있다. ```to=""``` 부분에 이동하고자 하는 url을 적어주면 된다.
 
