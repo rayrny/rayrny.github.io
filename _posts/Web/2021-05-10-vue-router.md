@@ -3,11 +3,12 @@ layout: posts
 title: "[Vue] Vue-router에 대해서 알아보자"
 categories:
   - Vue
-last_modified_at: 2021-05-11
+last_modified_at: 2021-05-10
 author_profile: true
 tags:
   - 웹 프레임워크
   - vue
+  - router
 toc: true
 toc_sticky: true
 sidebar:
@@ -20,7 +21,7 @@ sidebar:
 설치는 간단하게 ```npm install vue-router```를 통해 할 수 있다.
 
 
-### 라우터 설치 후..
+### 🐤 라우터 설치 후..
 
 ----
 
@@ -77,11 +78,7 @@ export default router
 이후 만들어둔 뷰 컴포넌트를 모두 등록해주자.
 
 ```javascript
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import Login from '../views/Login.vue'
-import Signup from '../views/Signup.vue'
-import Mypage from '../views/Mypage.vue'
+// router/index.js
 
 // 경로 지정
 const routes = [
@@ -106,19 +103,55 @@ const routes = [
     component: Mypage,
     // 인증 후에만 접근할 수 있음
     // beforeEnter: [requireAuth]
-}
-  }
-
+  },
 ]
-
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
-
-export default router
-
 ```
 
 위와 같이 paths에 경로와 이름, 컴포넌트를 매핑해준다.
-mypage에 따로 주석처리가 되어있는 부분은 네비게이션 가드에서 자세히 다룰 예정이니 지금은 무시하자.
+mypage에 따로 주석처리가 되어있는 부분은 네비게이션 가드에서 자세히 다룰 예정이니 지금은 무시하자. 
+
+#### 이제, 컴포넌트에서 라우터를 사용해보자!
+
+----
+
+먼저, ```App.vue```에서 라우터를 통해 전환할 부분을 명시해 주자.
+
+```javascript
+// App.vue
+<template>
+  <div id="nav">
+    <!-- 라우터로 화면을 전환할 때도 계속해서 바뀌지 않는 부분 -->
+    <Header />
+    <br>
+  <router-view>
+  <!-- 화면이 전환되는 부분 -->
+  </router-view>
+  </div>
+
+</template>
+```
+
+위의 코드를 보면, 화면에는 맨 윗 부분에 ```Header```가 있고, url이 바뀔 때마다 ```<router-view>``` 태그가 있는 부분이 위에서 등록한 ```Home.vue, Login.vue``` 등의 컴포넌트로 화면에 표시된다.
+
+----
+
+**페이지 내에서 이동을 할 경우**에는, ```router-link```를 통해 특정 링크로 이동할 수 있다.
+
+위의 코드에 잠시 등장했던 Header.vue를 살펴보자.
+```javascript
+// Header.vue
+<template>
+    <div id='header'> 
+        <div id='menuWrap'>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/login">Login</router-link>
+        </div>
+    </div>
+</template>
+```
+
+헤더에는 ```'menuWrap'```으로 묶인 상단 메뉴바가 있는데, 각각 Home과 Login으로 이동할 수 있다. ```to=""``` 부분에 이동하고자 하는 url을 적어주면 된다.
+
+위의 방식이 **선언적 방식 네비게이션**이라면, **프로그래밍적 방식 네비게이션**도 있다. ```this.$router.push("")```와 같이 라우터의 인스턴스 메소드를 통해 프로그래밍적으로 링크를 이동할 수 있다.
+
+이외에도, push와 같은 역할을 하지만 새로운 history 항목에 추가하지 않고 탐색하는 ```router.replace("")```, history 스택에서 앞 뒤로 이동할 수 있는 ```router.go(n)```이 있다.
