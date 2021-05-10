@@ -116,7 +116,7 @@ mypage에 따로 주석처리가 되어있는 부분은 네비게이션 가드�
 
 먼저, ```App.vue```에서 라우터를 통해 전환할 부분을 명시해 주자.
 
-```HTML
+```javascript
 // App.vue
 <template>
   <div id="nav">
@@ -138,7 +138,7 @@ mypage에 따로 주석처리가 되어있는 부분은 네비게이션 가드�
 **페이지 내에서 이동을 할 경우**에는, ```router-link```를 통해 특정 링크로 이동할 수 있다.
 
 위의 코드에 잠시 등장했던 Header.vue를 살펴보자.
-```HTML
+```javascript
 // Header.vue
 <template>
     <div id='header'> 
