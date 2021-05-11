@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[Vue] Vue-router에 대해서 알아보자"
+title: "[Vue 3] Vue-router에 대해서 알아보자"
 categories:
   - Vue
 last_modified_at: 2021-05-10
