@@ -36,5 +36,6 @@ data() {
 함수와 같이 return 값 내부에 적어 주어야 한다. 
 
 그렇지 않으면 아래의 오류를 만나게 된다 XD
+
 ```[Vue warn]: The "data" option should be a function that returns a per-instance value in component definitions```
 
