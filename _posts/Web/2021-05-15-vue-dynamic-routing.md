@@ -95,4 +95,32 @@ export default {
 
 -----
 
-<router-link>를 통한 방법은 변수값을 어떻게 넘겨주어야 하는지 모르겠어서 프로그래밍 방식으로 코딩했다.
+```<router-link>```를 통한 방법은 변수값을 어떻게 넘겨주어야 하는지 모르겠어서 프로그래밍 방식으로 코딩했다.
+
+```javascript
+// components/HeaderAuth.vue
+<template>
+    <div id='header'> 
+        <div id='menuWrap'>
+        <!--<router-link to="mypage">Mypage</router-link>-->
+        <a @click="goMypage()"> Mypage </a> 
+        <a @click.prevent="onClickLogout()">Logout</a>
+        </div>
+    </div>
+</template>
+
+<script>
+import jwt_decode from 'jwt-decode';
+export default {
+    methods: {
+        goMypage(){
+          // 따로 서버에 아이디를 요청하지 않고,
+          // 로그인 시 로컬스토리지에 저장한 토큰을 해독해서 id를 얻음
+          let user_id = jwt_decode(token).user_id;
+          this.$router.push({name: 'Mypage', params: {userId : user_id}});
+        },
+    },
+}
+</script>
+
+```
