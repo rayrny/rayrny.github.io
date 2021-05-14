@@ -23,7 +23,7 @@ sidebar:
 
 라우터의 path를 결정할 때, ```:params```을 통해 패턴을 만들 수 있다. 이를 통해, 마이페이지와 같이 동일한 레이아웃을 가지지만 사용자에 따라 다른 정보를 렌더링할 수 있다.
 
-동적 라우트릉 매칭하기 위해서, 가장 먼저 **router/index.js**의 path를 동적 세그먼트를 사용해 나타내자.
+동적 라우트를 매칭하기 위해서, 가장 먼저 **router/index.js**의 path를 동적 세그먼트를 사용해 나타내자.
 
 ```javascript
 // router/index.js
@@ -103,8 +103,8 @@ export default {
     <div id='header'> 
         <div id='menuWrap'>
         <!--<router-link to="mypage">Mypage</router-link>-->
-        <a @click="goMypage()"> Mypage </a> 
-        <a @click.prevent="onClickLogout()">Logout</a>
+          <a @click="goMypage()"> Mypage </a> 
+          <a @click.prevent="onClickLogout()">Logout</a>
         </div>
     </div>
 </template>
