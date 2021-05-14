@@ -26,9 +26,9 @@ Vue에 대해 차근차근 배우지 않은 채로 개발을 하다보니, 정�
 
 ```javascript
 data() {
-	return {
-      user_name: '',
-      user_id: '',
+    return {
+        user_name: '',
+        user_id: '',
 	}; 
 }
 ```
