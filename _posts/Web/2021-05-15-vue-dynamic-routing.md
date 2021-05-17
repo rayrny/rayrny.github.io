@@ -95,7 +95,7 @@ export default {
 
 -----
 
-```<router-link>```를 통한 방법은 변수값을 어떻게 넘겨주어야 하는지 모르겠어서 프로그래밍 방식으로 코딩했다.
+~~```<router-link>```를 통한 방법은 변수값을 어떻게 넘겨주어야 하는지 모르겠어서 프로그래밍 방식으로 코딩했다.~~
 
 ```javascript
 // components/HeaderAuth.vue
@@ -124,3 +124,31 @@ export default {
 </script>
 
 ```
+
+**추가**
+
+```javascript
+<router-link :to='`project/${id}`'>
+</router-link>
+```
+위와 같이 하면 라우터 링크에서도 파라미터를 넘겨줄 수 있다.
+
+
+그리고 중첩 라우트를 사용할 때, children의 경로는 '/'로 시작하면 안된다.
+
+```javascript
+    {
+      path: '/mypage/:userId',
+      name: 'Mypage',
+      component: Mypage,
+      children: [
+        {
+          // 중첩할때의 path에는 /로 시작 x (/project/:.. 이런식으로 하면 새로운 경로가 되어버림)
+          path: 'project/:projectId',
+          name: 'Project',
+          component: Project,
+        }
+      ]
+    },
+```
+
