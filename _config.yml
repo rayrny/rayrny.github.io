@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 locale                   : "ko-KO"
 title                    : "Ray's DevLog 🌠"
 title_separator          : "|"
-subtitle                 : "천천히 흘러가는 공간" # site tagline that appears below site title in masthead
+subtitle                 : "자유롭게 성장하는 공간" # site tagline that appears below site title in masthead
 name                     : "Suji Kim"
 description              : "Front-end Developer"
 url                      : "https://jerimo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
