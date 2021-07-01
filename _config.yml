@@ -20,7 +20,7 @@ title                    : "Ray's DevLog 🌠"
 title_separator          : "|"
 subtitle                 : "천천히 흘러가는 공간" # site tagline that appears below site title in masthead
 name                     : "Suji Kim"
-description              : "Web/App Developer & Designer"
+description              : "Front-end Developer"
 url                      : "https://jerimo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
