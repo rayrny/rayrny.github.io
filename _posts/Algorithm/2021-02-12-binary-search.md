@@ -8,6 +8,8 @@ author_profile: true
 tags:
   - C/C++
   - 이진 탐색
+  - 정렬
+  - 시간복잡도
 toc: true
 toc_sticky: true
 sidebar:
