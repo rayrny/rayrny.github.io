@@ -17,18 +17,9 @@ sidebar:
 
 ### 🧁 기술 면접 대비를 위한 공부 2..
 
-####Json, Rest api, HTTP 등의 웹 프로그래밍
 
-렌더링 최적화 - useMemo useCallback
-re-rendering 되는 조건?
 
-이벤트 루프
-
-자바스크립트 원시값
-
-display: none?
-
-#### virtual-DOM
+#### Virtual-DOM
 
 DOM을 추상화한 가상의 객체. DOM이란 HTML 문서를 파싱하여 문서의 구성 요소들을 객체로 구조화한 것이다.
 
