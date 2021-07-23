@@ -29,6 +29,8 @@ sidebar-contents:
     children:
       - title: "Vue"
         url: /categories/vue
+      - title: "React"
+        url: /categories/react
 
   - title: Programming Language
     children:
