@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: React
+title: Javascript
 permalink: /categories/javascript
 author_profile: true
 sidebar:
