@@ -2,7 +2,7 @@
 layout: posts
 title: "[JS] target과 currentTarget"
 categories:
-  - React
+  - Javascript
 last_modified_at: 2021-08-02
 author_profile: true
 tags:
