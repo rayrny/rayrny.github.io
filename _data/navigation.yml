@@ -26,11 +26,14 @@ sidebar-contents:
         url: /categories/project-flog
 
   - title: Web
-    children:
-      - title: "Vue"
-        url: /categories/vue
+    children:   
+      - title: "Javascript"
+        url: /categories/javascript
       - title: "React"
         url: /categories/react
+      - title: "Vue"
+        url: /categories/vue
+   
 
   - title: Programming Language
     children:
