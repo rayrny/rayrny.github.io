@@ -2,7 +2,7 @@
 layout: posts
 title: "[Express] Unhandled promise rejection 에러"
 categories:
-  - React
+  - Express
 last_modified_at: 2021-08-10
 author_profile: true
 tags:
