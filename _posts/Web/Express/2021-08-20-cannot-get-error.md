@@ -23,6 +23,8 @@ sidebar:
 
 정말 열심히 구글링하며 web-pack 설정도 바꿔보고 package.json에 경로 추가도 해봤지만 전혀 해결되지 않았다.
 
+![ERR](/assets/image/cannot_get.PNG)
+
 #### webpack.config.js
 
 ----
@@ -52,5 +54,8 @@ app.get('/*', function(req, res) {
 ----
 
 정말 골치가 아프던 와중에 ```express cannot GET```을 검색했다가 해결 방법을 찾았다..
+
+![개비스콘](/assets/image/gabiscon.jpg)
+
 
 프론트 단에는 경로를 등록했지만 서버 단에 등록하지 않아서 생긴 이슈였다. 🤦‍♀️🤦‍♀️ ```routes/index.js```에 경로를 추가해주니 아주 깔끔하게 해결되었다고 한다.
