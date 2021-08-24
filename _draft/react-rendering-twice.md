@@ -1,0 +1,2 @@
+리액트 렌더링 두번 되는 이슈
+>https://all-dev-kang.tistory.com/entry/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%91%90%EB%B2%88-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%90%98%EB%8A%94-%EC%9D%B4%EC%8A%88%EC%97%90-%EB%8C%80%ED%95%98%EC%97%ACFeatStrictMode
