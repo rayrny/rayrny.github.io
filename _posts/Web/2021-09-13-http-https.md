@@ -22,14 +22,11 @@ HTTP는 서버/클라이언트 간 데이터를 주고받기 위한 프로토콜
 
 또한 HTTP는 애플리케이션 레벨의 프로토콜로 TCP/IP 위에서 작동한다. 또한 Stateless하다.
 
-<aside>
-💡 **TCP/IP란?** 
+💡 *TCP/IP란?* 
 컴퓨터들이 서로 정보를 주고받는데 쓰이는 통신 규약(프로토콜)의 모음인 Internet Protocol Suite의 한 종류이다. 인터넷 계층은 IP 프로토콜을 사용해 각 패킷의 전송을 책임지고, 전송 계층에서는 TCP 프로토콜을 사용해 전체 데이터의 전달을 책임진다.
 
 TCP/IP는 패킷 통신 방식의 프로토콜인 IP와 전송 조절 프로토콜인 TCP로 이루어져 있다. IP는 패킷 전달 여부를 보증하지 않고, 패킷을 보낸 순서와 받는 순서가 다를 수 있다.(unreliable datagram service) TCP는 IP 위에서 동작하는 프로토콜로, 데이터의 전달을 보증하고 보낸 순서대로 받게 해준다. [HTTP](https://ko.wikipedia.org/wiki/HTTP), [FTP](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC_%EC%A0%84%EC%86%A1_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C), [SMTP](https://ko.wikipedia.org/wiki/SMTP) 등 TCP를 기반으로 한 많은 수의 애플리케이션 프로토콜들이 IP 위에서 동작하기 때문에, 묶어서 TCP/IP로 부르기도 한다.
 *- 위키백과*
-
-</aside>
 
 ### HTTPS
 
