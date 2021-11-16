@@ -1,0 +1,130 @@
+## Web hook 과 Polling
+
+
+![스크린샷 2021-11-08 오후 2 05 24](https://user-images.githubusercontent.com/48341341/141890006-6b0ae869-5bcb-4e94-b9e5-fb446f84a3cf.png)
+
+**Polling**: 엔드포인트에 이벤트가 발생했는지 주기적으로 요청을 보내는 방식 → 비효율적
+
+**Webhook**: 엔드포인트에서 발생한 이벤트가 우리의 앱에 수신되는 형태 → 이벤트에 대한 핸들러
+
+*엔트포인트란 발생한 이벤트가 어디로 전달되어야 하는가에 대한 것. 한 마디로 이벤트의 목적지이다.
+
+슬랙 API에 incoming webhooks라는 것이 있는데, 이를 통해 외부 시스템에서 슬랙으로 메시지를 쏴줄 수 있다. 즉, 외부 시스템에서 어떤 이벤트가 발생하여 웹 훅이 실행되면 웹 훅 내부에서 슬랙의 웹 훅 엔드포인트로 post 요청을 쏘는 것이다. 이를 통해 슬랙 채널에 메시지를 보낼 수 있다. 
+
+*[이미지 출처 및 참고 블로그]*
+
+### 그래서 웹 훅이 뭐야?
+
+웹 훅은 역방향 API라고도 한다. 일반적으로 API는 클라이언트가 서버를 호출하지만, 웹훅의 경우 웹 훅을 서버측에 등록하면 서버에서 특정 이벤트가 발생했을 때 클라이언트를 호출하게 된다. 
+
+### Slack의 incoming web hook을 통해 간단한 알림 봇 만들기
+
+위의 api를 통해 특정 이벤트가 발생하면 알림을 보내주는 간단한 알림 봇을 만들 수 있다. 
+
+우선 알림 봇이 필요한 채널에 들어가서 `Incoming WebHooks(수신 웹 후크)` 앱을 추가한다.
+
+![스크린샷 2021-11-08 오후 6 12 07](https://user-images.githubusercontent.com/48341341/141890070-619ba00d-020f-43f1-be81-dd25c24aee34.png)
+
+
+우리는 위에서 보이는 웹후크 URL만 있으면 알림을 보낼 수 있다.
+
+보내고자 하는 메시지를 postData에 저장해 두었고, headers에는 `'Content-Type': 'application/json'` 을 꼭 추가해 주도록 한다. 
+
+그런 다음 POST 로 요청을 보내기만 하면 된다! 
+
+슬랙의 메시지 첨부 파일 부분을 보면 다양한 서식을 지정해 줄 수 있으니 참고하자.
+
+![스크린샷 2021-11-09 오전 10 24 28](https://user-images.githubusercontent.com/48341341/141890092-0b2db06e-f885-4ddb-af44-1c287299a849.png)
+
+
+### API 테스트 해보기
+
+POSTMAN을 사용해서 API를 손쉽게 테스트할 수 있다. POST 방식으로 요청을 보내야 하므로 선택한 뒤, url에는 아까 기억해둔 웹 훅 url을 넣어준다.
+
+다음으로는 Header에 `Content-Type: application/json` 을 추가해 준 뒤,
+
+![스크린샷 2021-11-09 오후 12 06 20](https://user-images.githubusercontent.com/48341341/141890126-ab73a8a1-6c57-4f0d-a888-0c441b6e7a7d.png)
+
+
+Body에는 메시지 내용을 적으면 된다. 간단하게 테스트 해 볼 예정이므로 슬랙에서 예시로 제공한 메시지를 그대로 복사 붙여넣기 했다. 
+
+(만약 붙여넣은 내용에 에러가 뜬다면 따옴표를 잘 확인해보자. 쌍따옴표를 써야 하고 한/영 차이인지는 모르겠지만 기울어져 보이는 따옴표가 아닌( *"* ) 정방향의 따옴표( " )를 사용해야 한다. **)
+![스크린샷 2021-11-09 오전 10 26 55](https://user-images.githubusercontent.com/48341341/141890178-fc711af6-c611-4f80-8f8d-b24075820c2a.png)
+
+
+
+마지막으로 Send 버튼을 누르면 Incomig web hook을 추가했던 채널로 알림이 오는 것을 확인할 수 있다.
+<img width="509" alt="스크린샷 2021-11-09 오전 10 29 08" src="https://user-images.githubusercontent.com/48341341/141890199-a7120b92-6252-4c5d-9855-936ef2aeaf1e.png">
+
+
+
+### 알림 봇으로 사용하려면?
+
+아래의 코드는 간단하게 버튼을 누르면 슬랙으로 누른 사람의 정보를 볼 수 있는 api를 짜고, 그 일부를 가져온 것이다. 해당 코드는 `sendMessage`라는 함수 내부에 내용이고, `/api/user/alerm` url로 연결된 라우터에서 `sendMessage` 함수를 호출하게 된다.
+
+```jsx
+
+const sendMessage = async ({ userName, userPhone }) => {
+	const postData = {
+		attachments: [
+			{
+				title: '알림 봇이 알림을 보냈습니다!',
+				pretext: '아래의 유저 정보를 확인해보세요.',
+				color: '#ffffff',
+				fields: [
+					{
+						title: '이름',
+						value: userName,
+						short: true,
+					},
+					{
+						title: '연락처',
+						value: userPhone,
+						short: true,
+					},
+				],
+			},
+	],};
+
+	const res = await axios.post(
+		${웹 훅 url},
+		postData,
+		{
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		}
+	);
+	if (res && res.data) {
+		if(res.data === 'ok') {
+			return true;
+		}
+	}
+}
+
+exports.sendMessage = sendMessage;
+---
+
+// 버튼 클릭시 아래의 url로 axois 요청을 보낸다.
+router.post('/api/user/alerm', async (req, res) => {
+	try {
+		// ... 다른 내용들
+
+		slack.sendMessage({ userName, userPhone });
+		return res.json(true);
+	} catch {
+		return res.json(false);
+	}
+});
+```
+
+이후 postman을 통해 위의 API를 호출해보자. 캡쳐 화면은 위의 예시와 맞아 떨어지지 않아 주소와 body에 보낼 데이터 값을 편집해서 넣어두었다.
+
+ `https://{localhost 또는 실제 서비스 되는 주소}/api/user/alerm` 의 주소로 보내도록 하고 body에는 필요한 데이터인 `userName, userPhone`을 넣어준다.
+
+![스크린샷 2021-11-09 오전 10 25 18](https://user-images.githubusercontent.com/48341341/141890233-3c8855a5-e51d-4c49-b1e0-73643a553b9f.png)
+
+
+`send` 버튼을 누르면 요청이 가게 되고, `slack.sendMessage()` 함수가 실행된다. 이 함수 내부에서 웹 훅을 사용해 슬랙으로 알림을 보낼 수 있고, 알림 보내기에 성공했다면 응답으로 `'ok'`를 받을 수 있다.
+
+우리는 `sendMessage`함수 하단에서 위의 응답을 확인해서 성공 시 `true`를 반환하도록 했으므로 postman에서 하단 응답으로 `true`가 적혀있는 것을 확인할 수 있다.
