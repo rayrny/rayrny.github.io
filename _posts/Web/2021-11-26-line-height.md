@@ -1,3 +1,22 @@
+---
+layout: posts
+title: "[WEB] line-height: 18px을 쓰면 안 되는 이유"
+categories:
+  - Web
+last_modified_at: 2021-11-26
+author_profile: true
+tags:
+  - 웹
+  - MDN
+  - Javascript
+  - CSS
+toc: true
+toc_sticky: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
+---
+
 ### line-height 속성은 뭔데?
 
 MDN 문서에 의하면 line-height 속성은 Line box의 높이를 지정한다. 한 마디로 텍스트 줄 간격을 설정하는 것이다. 또한 뒤이어 이런 설명이 나타나는데, 번역본을 보아도 쉽게 이해가 되지 않는다.
