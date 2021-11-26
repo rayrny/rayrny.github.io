@@ -40,12 +40,13 @@ lnline 요소라는 것은 알고 있는데 앞에 붙은 non-replaced가 무슨
 
 간단 명료한 설명이다. '외부 컨텐츠가 들어가는 것이 아닌' 경우가 바로 `non-replaced`한 것이다. MDN에 대체 요소(replaced element)에 대해 검색해 보니 이곳에서도 설명이 꽤 잘 나와 있었다. 
 
-<aside>
+<hr />
+
 💡 **대체 요소**(replaced element)란 자신의 표현 결과가 CSS의 범위를 벗어나는 요소로서, CSS 서식 모델과는 분리된 외부 객체인 요소입니다.
 
 간단히 말해서, 대체 요소는 자신의 콘텐츠가 현재 문서 스타일의 영향을 받지 않는 요소라고 할 수 있습니다. CSS는 대체 요소의 위치에 영향을 줄 수 있지만 콘텐츠에는 미치지 못합니다. `<iframe>`등 일부 대체 요소는 자신만의 스타일 시트를 가질 수도 있지만, 부모 문서의 스타일을 상속하지는 않습니다.
 
-</aside>
+
 
 **replaced element**
 
@@ -67,7 +68,7 @@ MDN에 따르면 line-height는 `unitless numbers` 를 사용하는 것을 권�
 ![스크린샷 2021-11-22 오전 11 06 05](https://user-images.githubusercontent.com/48341341/143008273-45724ac8-245b-475b-a6b1-30517e8fe0c2.png)
 
 
-```html
+```HTML
 <div class="box green">
 	<h1>오늘은 line-height 속성에 대해서 알아볼 것이다.</h1>
 	line-height는 unitless number로 지정하는 것이 좋다. 상속으로 인해 의도하지 않은 결과가 나타날 수 있기 때문이다.
@@ -84,7 +85,7 @@ MDN에 따르면 line-height는 `unitless numbers` 를 사용하는 것을 권�
 </div>
 ```
 
-```css
+```CSS
 .green {
   line-height: 1.1;
   border: solid limegreen;
