@@ -14,4 +14,4 @@ https://www.44bits.io/ko/post/wsl2-install-and-basic-usage
 https://www.phpinfo.kr/entry/WSL2%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-Nodejs-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%A4%EC%B9%98
 여기서 Node 개발 환경 설치하면 될듯
 
-그전에 유투브 한번 쭉 보고 흐름 확인해보긴
+위에 두 글을 보며 설치 완료!
