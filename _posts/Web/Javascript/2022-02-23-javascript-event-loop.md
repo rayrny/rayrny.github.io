@@ -1,8 +1,8 @@
 ---
 layout: posts
-title: "[Javascript] 자바스크립트가 비동기 작업을 하는 방식: Event Loop, 그리고 Queue"
+title: "[JS] 자바스크립트가 비동기 작업을 하는 방식: Event Loop, 그리고 Queue"
 categories:
-  - Web
+  - Javascript
 last_modified_at: 2022-02-23
 author_profile: true
 tags:

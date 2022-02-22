@@ -2,7 +2,7 @@
 layout: posts
 title: "[WEB] line-height: 18px을 쓰면 안 되는 이유"
 categories:
-  - Web
+  - Javascript
 last_modified_at: 2021-11-26
 author_profile: true
 tags:
