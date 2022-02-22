@@ -1,3 +1,22 @@
+---
+layout: posts
+title: "[Javascript] 자바스크립트가 비동기 작업을 하는 방식: Event Loop, 그리고 Queue"
+categories:
+  - Web
+last_modified_at: 2022-02-23
+author_profile: true
+tags:
+  - 웹
+  - Javascript
+  - 비동기
+toc: true
+toc_sticky: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
+---
+
+
 > [https://sculove.github.io/post/javascriptflow/](https://sculove.github.io/post/javascriptflow/)
 
 
