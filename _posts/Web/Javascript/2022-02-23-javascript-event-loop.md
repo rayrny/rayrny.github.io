@@ -63,7 +63,3 @@ console.log("script end");
 microtask는 비동기로 실행될 작업이, 현재 실행되고 있는 스크립트 바로 다음에 일어나게 되는 경우이다. 에시로는 MutationObserver와 Promise가 있다. (그으래서 setTimeout의 콜백 함수보다 promise.resolve.then()이 먼저 실행되었던 것!)
 
 **예제 코드의 실행 단계**
-
-![IMG_6A1ED8113C0A-1](https://user-images.githubusercontent.com/48341341/155157754-3b6c921b-194b-447e-b58a-7ee616ea69f2.jpeg)
-![IMG_A5DA06294C46-1](https://user-images.githubusercontent.com/48341341/155157775-9dc10da5-9538-4d5f-8c95-85d6f3eb46d1.jpeg)
-![IMG_4576D193EAD3-1](https://user-images.githubusercontent.com/48341341/155157789-65466cab-1668-4e3f-9dfb-1dc32beb0cca.jpeg)
