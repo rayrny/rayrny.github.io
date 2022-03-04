@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "Ray"
-  avatar           : "/assets/image/mimo1.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "배우는 것을 좋아하는\nWeb Developer"
+  avatar           : "/assets/image/profile1.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "매일의 HIGHLIGHT를 찾아서"
   location         : "Seoul, South Korea"
   email            : "bion239@naver.com"
   links:
