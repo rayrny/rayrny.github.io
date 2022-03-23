@@ -159,3 +159,5 @@ console.log("script end");
 setTimeout보다 먼저 찍혔다는 소리는 await 이 `microtaskQueue`에 들어간다는 의미일까? 그래서 찬찬히 생각해보니 맨 처음 자바스크립트가 아래로 내려가면서 Promise 함수를 콜스택에서 부른 후 `microtaskQueue`에 then1이 등록되고 이후에 asyncAwait 함수가 콜스택에 등록되어 then1 뒤에 async await이 등록되기 때문인 것 같다.
 
 그런데 이제 interval func은 왜 스크립트 시작과 끝 사이에 찍히게 된걸까..?
+
+는 당연히.. 별다른 비동기로 제어하는 작업이 아니니까.. 바보야..
