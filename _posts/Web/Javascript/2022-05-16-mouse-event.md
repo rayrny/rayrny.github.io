@@ -1,4 +1,22 @@
-# Mouse Event
+---
+layout: posts
+title: "[JS] mouse-event 우선순위 파해치기"
+categories:
+  - Javascript
+last_modified_at: 2022-05-16
+author_profile: true
+tags:
+  - 웹
+  - Javascript
+toc: true
+toc_sticky: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
+---
+
+
+### Mouse Event
 
 저번에 이어 마우스 이벤트로 한참 애를 먹었다. 어제는 이녀석 때문에 마크까지 동원되었다.
 
