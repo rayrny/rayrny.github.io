@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 
 # Site Settings
 locale                   : "ko-KO"
-title                    : "Ray's DevLog 🌠"
+title                    : "ray_.log"
 title_separator          : "|"
 subtitle                 : "자유롭게 성장하는 공간" # site tagline that appears below site title in masthead
 name                     : "Suji Kim"
