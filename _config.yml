@@ -278,7 +278,7 @@ defaults:
       author_profile: true
       read_time: false
       # date: true
-      comments: # true
+      comments: true
       share: true
       related: true
       toc_ads: true
