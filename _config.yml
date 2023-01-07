@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 
 # Site Settings
 locale                   : "ko-KO"
-title                    : "Ray's DevLog 🌠"
+title                    : "ray_.log"
 title_separator          : "|"
 subtitle                 : "자유롭게 성장하는 공간" # site tagline that appears below site title in masthead
 name                     : "Suji Kim"
@@ -51,8 +51,8 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : false # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "Ray"
-  avatar           : "/assets/image/mimo1.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "배우는 것을 좋아하는\nWeb Developer"
+  avatar           : "/assets/image/profile1.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "매일의 HIGHLIGHT를 찾아서"
   location         : "Seoul, South Korea"
   email            : "bion239@naver.com"
   links:
@@ -278,7 +278,7 @@ defaults:
       author_profile: true
       read_time: false
       # date: true
-      comments: # true
+      comments: true
       share: true
       related: true
       toc_ads: true

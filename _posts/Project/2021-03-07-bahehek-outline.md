@@ -11,7 +11,7 @@ tags:
 toc : true
 toc_sticky : true
 header:
-  teaser: /assets/images/bahehek/teaser.PNG
+  teaser: /assets/image/bahehek/teaser.PNG
 sidebar:
   title: Posts
   nav: "sidebar-contents"

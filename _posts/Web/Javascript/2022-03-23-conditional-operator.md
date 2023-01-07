@@ -1,4 +1,22 @@
-두리뭉실하게 알고는 있었던 조건 연산자의 동작 방식에 대해서 자세히 알아보자.
+---
+layout: posts
+title: "[JS] 조건 연산자 깊이 파고들기"
+categories:
+  - Javascript
+last_modified_at: 2022-03-23
+author_profile: true
+tags:
+  - 웹
+  - Javascript
+toc: true
+toc_sticky: true
+sidebar:
+  title: Posts
+  nav: "sidebar-contents"
+---
+
+
+### 두리뭉실하게 알고는 있었던 조건 연산자의 동작 방식에 대해서 자세히 알아보자.
 
 예제 1)
 
