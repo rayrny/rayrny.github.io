@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : "자유롭게 성장하는 공간" # site tagline that appears below site title in masthead
 name                     : "Suji Kim"
 description              : "Front-end Developer"
-url                      : "https://jerimo.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://rayrny.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -52,7 +52,7 @@ reCaptcha:
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
-search_full_content      : false # true, false (default)
+search_full_content      : true # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
@@ -93,7 +93,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ray"
+  name             : "ray"
   avatar           : "/assets/image/profile1.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "매일의 HIGHLIGHT를 찾아서"
   location         : "Seoul, South Korea"
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/jerimo"
+      url: "https://github.com/rayrny"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
     #  url: "https://instagram.com/_ray.moon"

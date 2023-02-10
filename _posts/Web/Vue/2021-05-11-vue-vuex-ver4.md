@@ -35,7 +35,7 @@ npm install vuex@next --save
 
 ----
 
-<a href="https://jerimo.github.io/vue/vue-vuex/">이전 포스팅</a>에서와 동일하게 store폴더를 생성하고 그 안에 index.js를 생성한 후, main.js에 import하자.
+<a href="https://rayrny.github.io/vue/vue-vuex/">이전 포스팅</a>에서와 동일하게 store폴더를 생성하고 그 안에 index.js를 생성한 후, main.js에 import하자.
 
 import는 라우터와 동일한 방식으로 해주면 된다.
 
@@ -72,4 +72,4 @@ export const store = createStore ({
 })
 ```
 
-이렇게 하면 vue 3에서 vuex를 사용할 수 있다. 🤩 vuex에 대한 자세한 설명은 위에 언급한 <a href="https://jerimo.github.io/vue/vue-vuex/">이전 포스팅</a>에 따로 정리했다.
+이렇게 하면 vue 3에서 vuex를 사용할 수 있다. 🤩 vuex에 대한 자세한 설명은 위에 언급한 <a href="https://rayrny.github.io/vue/vue-vuex/">이전 포스팅</a>에 따로 정리했다.

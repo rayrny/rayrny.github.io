@@ -45,7 +45,7 @@ sidebar:
 
 <mark style='background-color: #f5f0ff'> </mark>
 
-<a href="https://jerimo.github.io/algorithm/gcd/">[알고리즘] GCD와 LCM</a>
+<a href="https://rayrny.github.io/algorithm/gcd/">[알고리즘] GCD와 LCM</a>
 
 ![이것이 코딩테스트다](/assets/image/book.PNG){: width="300" height="500"}
 
