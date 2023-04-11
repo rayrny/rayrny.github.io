@@ -26,7 +26,13 @@ webpack4에서는 왜 문제가 되지 않았는지는 찾아보는 중...
 그런데 명확한 이유는 없이 죄다 ‘너 그거 순환 참조 에러야!’ 만 적혀있다..
 
 [Webpack/Issue #11958](https://github.com/webpack/webpack/issues/11958)
+
+
+처음엔 당연히 undefined겠지만..
+
 ![처음엔 당연히 undefined겠지만..](https://user-images.githubusercontent.com/48341341/224540245-f594b6b7-9244-49e7-a8cf-435a7b678ce8.png)
+
+여기서 step 이 undefined인게 문제인데, webpack 4에서는 왜 이걸 에러로 잡지 못했을까?
 
 ![여기서 step 이 undefined인게 문제인데, webpack 4에서는 왜 이걸 에러로 잡지 못했을까?](https://user-images.githubusercontent.com/48341341/224540284-5a49d2ce-fdd3-481a-b405-379357a32d10.png)
 
