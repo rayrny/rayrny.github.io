@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[JS] 자바스크립트가 비동기 작업을 하는 방식: Event Loop, 그리고 Queue"
+title: "[JS] 자바스크립트가 비동기 작업을 수행하는 방식: Event Loop, 그리고 Queue"
 categories:
   - Javascript
 last_modified_at: 2022-02-23
@@ -16,41 +16,49 @@ sidebar:
   nav: "sidebar-contents"
 ---
 
-
-> [https://sculove.github.io/post/javascriptflow/](https://sculove.github.io/post/javascriptflow/)
-
-
-사실 위의 블로그 포스팅을 다시 정리해보며 개념을 이해하는 과정이라 내가 새롭게 추가한 내용은 거의 없다고 보면 된다.. 
-
 동시에 단 하나의 작업만을 할 수 있는 자바스크립트가 비동기 작업을 할 수 있는 비밀은 바로 Event Loop과 Queue이다.
 
-자바스크립트가 작업들을 확인하는 우선 순위는 다음과 같다. (call stack을 가장 먼저 확인하고 스택에 작업이 없으면 microtask queue를 확인하는 식)
+자바스크립트가 작업들을 확인하는 우선 순위는 다음과 같다. (Call stack을 가장 먼저 확인하고 스택에 작업이 없으면 Microtask queue를 확인하는 식)
 
-`Call stack`  → `Microtask queue` → `Animation frames` → `Task queue` 
+`Call stack` → `Microtask queue` → `Animation frames` → `Task queue`
 
-### 자바스크립트의 동작 방식
+### 자바스크립트의 동작 순서
 
-```jsx
+```js
 console.log("script start");
 
-setTimeout(function() {
+setTimeout(function () {
   console.log("setTimeout");
 }, 0);
 
-Promise.resolve().then(function() {
-  console.log("promise1");
-}).then(function() {
-  console.log("promise2");
-});
+Promise.resolve()
+  .then(function () {
+    console.log("promise1");
+  })
+  .then(function () {
+    console.log("promise2");
+  });
 
-requestAnimationFrame(function {  
+requestAnimationFrame(function () {
   console.log("requestAnimationFrame");
 });
 
 console.log("script end");
 ```
 
-위 예제를 단계에 따라 나눠 보는 것은 따로 그림을 그려가며 보는 것이 좋을 것 같아 이후에 해보도록 하고, 우선적으로 꼭 알고 가야 하는 것은 다음 세 가지이다.
+<details>
+  <summary>정답 (개발자 도구를 열고 직접 확인해도 좋다)</summary>
+  <div markdown="1">
+1. script start
+2. script end
+3. promise1
+4. promise2
+5. setTimeout
+6. requestAnimationFrame
+  </div>
+</details>
+
+위 예제를 단계에 따라 나눠 보는 것은 밑에서 그림을 그려가며 보는 것이 좋을 것 같아 이후에 해보도록 하고, 우선적으로 꼭 알고 가야 하는 것은 다음 세 가지이다.
 
 1. 비동기 작업으로 등록되는 작업은 task, microtask 그리고 animationFrame 작업이다.
 2. microtask가 task보다 우선순위가 높다.
@@ -58,9 +66,11 @@ console.log("script end");
 
 ### Task와 Microtask
 
-먼저 task는 비동기 작업의 순서를 보장하는 형태의 작업이다. (이 말이 task다음 곧바로 다음 task가 실행된다는 의미는 아니다. 말 그대로 예약된 순서를 보장한다는 것!) 예시로는 `setTimeout`의 `callback` 함수 등이 되겠다.
+먼저 task는 비동기 작업의 순서를 보장하는 형태의 작업이다. (이 말이 task다음 곧바로 다음 task가 실행된다는 의미는 아니다. 말 그대로 예약된 순서를 보장한다는 것!)
 
-microtask는 비동기로 실행될 작업이, 현재 실행되고 있는 스크립트 바로 다음에 일어나게 되는 경우이다. 에시로는 `MutationObserver`와 `Promise`가 있다. (그으래서 setTimeout의 콜백 함수보다 `promise.resolve.then()`이 먼저 실행되었던 것!)
+예시로는 `setTimeout`의 `callback` 함수가 있다.
+
+microtask는 비동기로 실행될 작업이, 현재 실행되고 있는 스크립트 바로 다음에 일어나게 되는 경우이다. 예시로는 `MutationObserver`와 `Promise`가 있다. (그으래서 setTimeout의 콜백 함수보다 `promise.resolve.then()`이 먼저 실행되었던 것!)
 
 **예제 코드의 실행 단계**
 
@@ -68,96 +78,108 @@ microtask는 비동기로 실행될 작업이, 현재 실행되고 있는 스크
 ![IMG_A5DA06294C46-1](https://user-images.githubusercontent.com/48341341/155157775-9dc10da5-9538-4d5f-8c95-85d6f3eb46d1.jpeg)
 ![IMG_4576D193EAD3-1](https://user-images.githubusercontent.com/48341341/155157789-65466cab-1668-4e3f-9dfb-1dc32beb0cca.jpeg)
 
-
 ### 사소한 궁금증에서 시작된...
 
-위의 예제를 살펴본 뒤에 생긴 궁금증, `async await`은 어떤 큐로 가서 동작을 하게 될까?
+위의 예제를 살펴본 뒤에 생긴 궁금증, 그렇다면 `async await`은 어떻게 동작을 하게 될까?
 
-처음에는 아래와 같은 코드를 넣고 결과를 확인해 보았는데 어디에 있든 위치와 상관없이 계속 `setTimeout`이후에 찍혀서 `Task Queue`로 들어가는줄 알았는데.. 바보였다. 
-
-
-```jsx
-const intervalFunction = () => {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve(5);
-		}, 3000);
-	});
-}
-
-const asyncAwait = async() => {
-    const res = await intervalFunction();
-    console.log('async await');
-}
-
-asyncAwait();
-```
-
-당연히 `setTimeout`을 사용하니까... ㅋㅋㅋㅋ
-
-무튼 `setTimeout`을 부르지 않고 바로 `resolve` 하는 함수로 변경한 뒤에, 스크립트 실행 후 맨 처음으로 호출하도록 했을 때와 `setTimeout함수` 이후에 부른 경우에는 아래와 같은 결과가 나왔다.
-
-> "script start"
-> "script end"
-> "async await"
-> "promise1"
-> "promise2"
-> "requestAnimationFrame"
-> "setTimeout"
-
-그리고 이제 `Promise 함수` 이후에 호출하도록 하니 좀 요상한 결과가 나왔다.
+먼저 생각해볼 수 있는 것은 `async await`은 `Promise().then(...)`을 쉽게 사용할 수 있도록 제공하는 문법이라는 것이다.
 
 ```jsx
-console.log("script start");
+const delay = (time) => {
+  return new Promise((res) => setTimeout(res, [time]));
+};
 
-setTimeout(function() {
-  console.log("setTimeout");
-}, 0);
+const asyncFunc = async () => {
+  console.log("await 시작");
+  await delay(2000);
+  console.log("await 끝");
+};
 
-Promise.resolve().then(function() {
-  console.log("promise1");
-}).then(function() {
-  console.log("promise2");
-});
+const main = () => {
+  console.log("스크립트 시작");
+  asyncFunc();
+  console.log("스크립트 끝");
+};
 
-
-const intervalFunction = () => {
-	return new Promise((resolve, reject) => {
-		//setTimeout(() => {
-		//	resolve(5);
-		//}, 3000);
-      resolve(5);
-      console.log('interval func');
-	});
-}
-
-const asyncAwait = async() => {
-    const res = await intervalFunction();
-    console.log('async await');
-}
-
-asyncAwait();
-
-requestAnimationFrame(function() {  
-  console.log("requestAnimationFrame");
-});
-
-console.log("script end");
+main();
 ```
 
-> "script start"
-> "interval func"
-> "script end"
-> "promise1"
-> "async await"
-> "promise2"
-> "requestAnimationFrame"
-> "setTimeout"
+<details>
+  <summary>정답 (개발자 도구를 열고 직접 확인해도 좋다)</summary>
+  <div markdown="1">
+1. 스크립트 시작
+2. await 시작
+3. 스크립트 끝
+4. await 끝
+  </div>
+</details>
 
-`promise1`과 `promise2` 중간에 `async await`이 찍혔다..!
+처음에는 `await 시작`이 찍히는 시점이 살짝 이해가 되지 않았는데, 다시보니 asyncAwait()을 만나서 `await 시작`까지는 비동기 작업이 아니니 바로 수행되고, await 이후 부터가 큐에 등록 되는 것이었다.
 
-setTimeout보다 먼저 찍혔다는 소리는 await 이 `microtaskQueue`에 들어간다는 의미일까? 그래서 찬찬히 생각해보니 맨 처음 자바스크립트가 아래로 내려가면서 Promise 함수를 콜스택에서 부른 후 `microtaskQueue`에 then1이 등록되고 이후에 asyncAwait 함수가 콜스택에 등록되어 then1 뒤에 async await이 등록되기 때문인 것 같다.
+await 부분을 아래와 같이 변경한 뒤에 실행해도 동일한 결과가 나온다.
 
-그런데 이제 interval func은 왜 스크립트 시작과 끝 사이에 찍히게 된걸까..?
+```js
+const asyncFunc = () => {
+  console.log("비동기 시작");
+  delay(0).then(() => {
+    console.log("비동기 끝");
+  });
+};
+```
 
-는 당연히.. 별다른 비동기로 제어하는 작업이 아니니까.. 바보야..
+눈으로도 직접 확인하고 싶다면, microtasck보다 우선순위가 낮은 requestAnimationFrame를 asyncFunc보다 먼저 위치시킨 뒤에 실행 시켜보자. 실행 결과 `requestAnimationFrame`가 가장 나중에 찍히는 것을 확인할 수 있다.
+
+```js
+const delay = (time) => {
+  return new Promise((res) => setTimeout(res, [time]));
+};
+
+const asyncFunc = async () => {
+  console.log("await 시작");
+  await delay(2000);
+  console.log("await 끝");
+};
+
+const main = () => {
+  console.log("스크립트 시작");
+
+  requestAnimationFrame(function () {
+    console.log("requestAnimationFrame");
+  });
+  asyncFunc();
+  console.log("스크립트 끝");
+};
+
+main();
+```
+
+위의 테스트를 진행하다가 async await이 Promise.then을 완벽하게 대체하는 것은 아니지 않나? 라는 생각이 들었었는데, (아래 예시에서 `이후 다른 작업`이 찍히는 순서가 다르다.) 이는 스코프에 대한 문제인 것으로 이해했다.
+
+```js
+// 1
+const asyncFunc = async () => {
+  console.log("await 시작");
+  await delay(2000);
+  console.log("await 끝");
+
+  console.log("이후 다른 작업");
+};
+
+// 2
+const asyncFunc2 = () => {
+  console.log("비동기 시작");
+  delay(0).then(() => {
+    console.log("비동기 끝");
+  });
+  console.log("이후 다른 작업");
+};
+```
+
+await 이후에 오는 일들은 사실 상 then 콜백 안에 모조리 들어간 것과 같다고 봐야한다.
+여기서 [].forEach 와 for(... of ...)에서의 비동기 동작 방식의 차이도 발생하게 된다.
+
+---
+
+ref.
+
+> [https://sculove.github.io/post/javascriptflow/](https://sculove.github.io/post/javascriptflow/)
