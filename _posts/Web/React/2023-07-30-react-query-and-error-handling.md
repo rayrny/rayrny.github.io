@@ -214,13 +214,11 @@ const queryClient = new QueryClient({
 
 ---
 
-## 기존 방식의 문제점을 분석하고 해결 방안을 제안합니다.
+## 기존 방식의 문제점 분석 및 해결 방안 제안
 
 ### AS-IS
 
 - 에러 바운더리를 적절한 단위로 감싸 사용하지 않는 경우가 많아, 한 컴포넌트에서 예상치 못한 에러 발생 시 에러가 전역으로 퍼져 화면 전체를 덮는 fallback 렌더링
-  ![AS-IS](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd661f52-52c0-44cb-9d11-40c6735bbc2a/Untitled.png)
-  AS-IS
 - 발생한 에러에 대해 처리 방식이 산재되어 있음
   - query, mutation의 onError 콜백을 통한 지역적 처리
   - 특정 컴포넌트에서 isError를 확인해 명령적으로 처리
@@ -228,25 +226,19 @@ const queryClient = new QueryClient({
 
 ### TO-BE
 
-- 에러 바운더리를 적절한 단위로 감싸 사용하지 않는 경우가 많아, 한 컴포넌트에서 예상치 못한 에러 발생 시 에러가 전역으로 퍼져 화면 전체를 덮는 fallback 렌더링
-  TeachConsoleApp 기준으로 PageLayout 컴포넌트 내부를 적절한 단위 에러 바운더리로 감싸 예상치 못한 에러가 발생했을 경우, 사용할 수 있는 컴포넌트는 사용 가능하도록 변경
-  - 에러가 발생했을 경우 에러가 발생한 컴포넌트에 에러를 가둠
-  - retry UI를 제공하는 ErrorResetBoundary 사용 시에, 해당 에러 바운더리에서 처리할 수 없는 에러의 경우 에러를 던져 상위 에러바운더리에서 처리할 수 있도록 함
+**에러 바운더리를 적절한 단위로 감싸 사용하지 않는 경우가 많아, 한 컴포넌트에서 예상치 못한 에러 발생 시 에러가 전역으로 퍼져 화면 전체를 덮는 fallback 렌더링**
 
-![TO-BE | ErrorBoundary](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52d50da8-7003-4e3a-8e21-6ca489cbc934/Untitled.png)
+TeachConsoleApp 기준으로 PageLayout 컴포넌트 내부를 적절한 단위 에러 바운더리로 감싸 예상치 못한 에러가 발생했을 경우, 사용할 수 있는 컴포넌트는 사용 가능하도록 변경
 
-TO-BE | ErrorBoundary
+- 에러가 발생했을 경우 에러가 발생한 컴포넌트에 에러를 가둠
+- retry UI를 제공하는 ErrorResetBoundary 사용 시에, 해당 에러 바운더리에서 처리할 수 없는 에러의 경우 에러를 던져 상위 에러바운더리에서 처리할 수 있도록 함
 
-![TO-BE | ErrorResetBoundary](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/629be811-20b3-4998-9cfb-a58464f2ada4/Untitled.png)
+**발생한 에러에 대해 처리 방식이 산재되어 있음**
 
-TO-BE | ErrorResetBoundary
+ErrorBoundary의 onError를 통해 에러 처리 방식을 일원화하고, 추가적으로 react-query의 queryClient 선언 시 queryCache, mutationCache에 글로벌 콜백을 등록해 전역적 처리가 가능
 
-- 발생한 에러에 대해 처리 방식이 산재되어 있음
-
-  ErrorBoundary의 onError를 통해 에러 처리 방식을 일원화하고, 추가적으로 react-query의 queryClient 선언 시 queryCache, mutationCache에 글로벌 콜백을 등록해 전역적 처리가 가능
-
-  - isError를 확인해 컴포넌트에서 명령적으로 에러 처리하는 경우는 모두 제거 가능
-  - query의 onError 콜백 사용 시 에러 처리에 대한 응집도가 낮아지는 것을 ErrorBoundary의 onError를 통해 해결
+- isError를 확인해 컴포넌트에서 명령적으로 에러 처리하는 경우는 모두 제거 가능
+- query의 onError 콜백 사용 시 에러 처리에 대한 응집도가 낮아지는 것을 ErrorBoundary의 onError를 통해 해결
 
 **TkDodo가 추천하는 방식에 대해 현 구조 분석**
 
@@ -262,7 +254,9 @@ _새롭게 알게된 것들_
   - 백그라운드(re-fetch) 오류를 잘 해결하지 못함. 백그라운드 리패치가 실패했을 경우 쿼리는 에러와 이전 데이터를 모두 가지고 있음. 에러가 있다고 바로 에러 카드로 보여주는 것 보다 더 다양한 처리를 생각해볼 수 있음
 - useQuery의 onError 콜백
   - 하나의 쿼리에 여러 옵저버가 붙어있을 경우 onError 콜백도 여러번 호출됨
-    ![onError](https://github.com/rayrny/goo2/assets/48341341/9d5be1ff-3a4a-481c-ac2a-e65ccfffa04c)
+
+![onError](https://github.com/rayrny/goo2/assets/48341341/9d5be1ff-3a4a-481c-ac2a-e65ccfffa04c)
+
 - `react-error-boundary` fallback UI props의 우선순위
   - 기존 `ErrorBoundary`를 개선하며 fallback의 우선순위에 대해 알게되었다. 이전에는 이러한 우선순위를 알 지 못해서 특정 props만 받도록 강제했었는데, 함께 일하는 동료가 직접 코드를 까보며 우선순위가 있었음을 알려주었다.
 
