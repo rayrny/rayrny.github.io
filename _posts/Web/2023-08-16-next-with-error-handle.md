@@ -101,7 +101,7 @@ export const getServerSideProps = withSessionSsr(async (context) => {
 
 ### 🌤️ 자잘한 시행 착오
 
-`**queryClient.fetchQuery` 와 `queryClient.prefetchQuery`\*\*
+**`queryClient.fetchQuery` 와 `queryClient.prefetchQuery`**
 
 - `prefetchQuery` 는 실패 시에 별도로 에러를 던지지 않고 결과에 에러를 담아서 보내준다.
   - `prefetch` 의 목적을 생각해보면 이해가 되는 동작이긴 하다. 오류 여부와는 상관없이 미리 데이터를 찌르는 것일 뿐이고 이후에 대한 결과는 데이터를 사용하는 곳에서 다시 요청을 보낼 지, 에러에 대해 처리할 지 결정하는게 맞는 것 같다.
@@ -112,8 +112,7 @@ export const getServerSideProps = withSessionSsr(async (context) => {
 - axios의 req 와 next 서버의 req 형식이 다르기 때문에 axios req.headers.cookie로 담아준 값을 next 서버쪽 코드인 checkAuthentication에서 읽지 못함 (req.cookies로 접근)
 - 이를 해결하기 위해, api 라우트에서 사용하는 `checkAuth() -> withSessionRoute` 에서 `req.headers.cookie`를 `req.cookies`에 넣어줌
   - 실제로 `next-connext` 에서 하고 있는 작업 (근데 왜 서버에서 요청보냈을 때는 저 처리가 안되어있는 건지 정확하게 이해 x, 브라우저가 보냈거나 bff 가 보냈거나 어쨌든 같은 axios 요청이 그대로 api 라우트로 넘어가는게 아닌가?)
-    ![https://github.com/goorm-dev/swcamp-site/assets/89910087/ed20efae-74ea-48d5-a8b0-53ed0a39d108](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e7883c67-430c-4cdb-a14e-8ba50f475c6c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-07-27_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.04.44.png)
-    https://github.com/goorm-dev/swcamp-site/assets/89910087/ed20efae-74ea-48d5-a8b0-53ed0a39d108
+  <img width="935" alt="스크린샷 2023-07-27 오후 10 04 44" src="https://github.com/rayrny/rayrny.github.io/assets/48341341/96da9c01-ebe0-4027-8733-fd8334ab78cc">
 
 ## 전역적인 서버 에러 처리
 
