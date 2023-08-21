@@ -4,8 +4,13 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<div class="archive__subtitle">
+  <h3>{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
+  <div>🚀(로켓) 포스팅을 먼저 읽어보시겠어요?</div>
+  <div>🪐(행성) 포스팅은 회고 성격을 띄고 있어요.</div>
+</div>
+주제에 대한 나름대로의 생각과 고민이 들어간 글, 
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
