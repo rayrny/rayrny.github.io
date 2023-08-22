@@ -208,7 +208,8 @@ router를 사용하여 이동하는 경우
 <br /> <br /> 
 
 **우선 아까 텍스트로만 설명했던 문제 상황을 영상으로 다시 확인해보자.**
-⚠️ gif라 조금 느려요..! 한국인이지만 조금만 여유롭게 시청 바랍니다.
+
+👉 gif라 조금 느려요..! 한국인이지만 조금만 여유롭게 시청 바랍니다.
 
 ![with-start-transition](https://github.com/rayrny/rayrny.github.io/assets/48341341/dba01af4-e140-4bdb-8d6e-f59c4dfb0cfc)
 
