@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[Next.js] BFF 서버 쿠키 유실 문제 및 서버 에러 전역 핸들링 처리하기"
+title: "🚀 [Next.js] BFF 서버 쿠키 유실 문제 및 서버 에러 전역 핸들링 처리하기"
 categories:
   - Next
 last_modified_at: 2023-08-16
