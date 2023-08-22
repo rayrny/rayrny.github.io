@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[WEB] 자네, 프로필에 달 한 번 띄워볼 생각 없나?"
+title: "🪐 [WEB] 자네, 프로필에 달 한 번 띄워볼 생각 없나?"
 categories:
   - Web
 last_modified_at: 2022-06-02

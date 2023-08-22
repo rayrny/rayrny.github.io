@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[React] react-hook-form에 대한 얕은 고찰"
+title: "🪐 [React] react-hook-form에 대한 얕은 고찰"
 categories:
   - React
 last_modified_at: 2023-01-30

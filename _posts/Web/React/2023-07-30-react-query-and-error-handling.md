@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[React] react-query와 선언적인 에러 처리"
+title: "🚀 [React] react-query와 선언적인 에러 처리"
 categories:
   - React
 last_modified_at: 2023-07-30
