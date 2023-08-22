@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "[React] windowing 기법을 통한 성능 최적화 feat.react-virtualized"
+title: "🚀 [React] windowing 기법을 통한 성능 최적화 feat.react-virtualized"
 categories:
   - React
 last_modified_at: 2023-04-11
