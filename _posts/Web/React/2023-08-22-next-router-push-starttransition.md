@@ -153,7 +153,9 @@ function AsyncComponent() {
 
 ### 🧀 **tl;dr**
 
-Next의 `router.push` 동작에 있어서 내부적으로 react element를 그릴 때 `startTransition`을 사용하고 있기 때문에(page router 기준) 동일한 페이지에서 query parameter가 변경된 경우에는 이미 존재하는 컴포넌트를 굳이 unmount 시키지(Suspense의 fallback을 보여주지) 않는다. 이 때문에 `keepPreviousData` 옵션을 준 것 과 같은 동작을 확인할 수 있다.
+Suspense를 지원하는 라우터의 경우, React에서는 네비게이팅을`startTransition`으로 감싸서 제공할 것을 권장한다. 
+
+실제로 Next의 `router.push` 동작에 있어서 `startTransition`을 사용하고 있기 때문에(page router 기준으로 이동하는 페이지에 해당하는 ***react element를 그릴 때 사용***, app router의 경우 모든 네비게이팅 동작에 사용), 동일한 페이지에서 query parameter가 변경된 경우에는 이미 존재하는 컴포넌트를 굳이 unmount 시키지(Suspense의 fallback을 보여주지) 않는다. 이 때문에 `keepPreviousData` 옵션을 준 것 과 같은 동작을 확인할 수 있다.
 
 이에 대한 해결책은 부모 컴포넌트의 `key`를 변경시키는 것이다. (결국 삽질기에서 시도했던 해결 방법과 동일하긴 하다.)
 
