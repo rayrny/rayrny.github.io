@@ -177,14 +177,14 @@ Suspense를 지원하는 라우터의 경우, React에서는 네비게이팅을`
 
 [useTransition](https://react.dev/reference/react/useTransition)에 대한 설명에는 보다 자세하게 예제까지 들어있으므로 이것도 함께 보는 것을 추천한다.
 
-- useTransition에서 ****[Preventing unwanted loading indicators](https://www.notion.so/a2a1002fc210488baff2ede989a96127?pvs=21)** 섹션에서 Suspense를 사용하는 경우에 transition을 사용하면 어떤 결과가 나타나는지 확인할 수 있다.
+- useTransition에서 ****[Preventing unwanted loading indicators](https://react.dev/reference/react/useTransition#preventing-unwanted-loading-indicators)** 섹션에서 Suspense를 사용하는 경우에 transition을 사용하면 어떤 결과가 나타나는지 확인할 수 있다.
 - `useTransition`과 다른 점은 `startTransition`은 트랜지션으로 인해 pending이 발생하고 있는지 확인할 수 있는 `isPending`을 제공하지 않는다는 것이다.
 
 ### Next의 router.push도 이걸 사용하는 건 아닐까?
 
 실제로, react 공식 문서에서는 네비게이팅을 transition으로 표기하는 것을 추천한다. 
 
-> ****[Building a Suspense-enabled router](https://www.notion.so/a2a1002fc210488baff2ede989a96127?pvs=21)****
+> ****[Building a Suspense-enabled router](https://react.dev/reference/react/useTransition#building-a-suspense-enabled-router)****
 > 
 
 실제로 확인해보기 위해, 일단 [next github](https://github.com/vercel/next.js)에 들어가 냅다 `startTransition`을 검색해보았다. 
