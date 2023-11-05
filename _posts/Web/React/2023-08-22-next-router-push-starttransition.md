@@ -45,7 +45,7 @@ function Test() {
 function AsyncComponent() {
     const router = useRouter();
     const page = useQueryParam('page', { parser: Number }) ?? 0;
-    const { data } = useSuspendedQuery(
+    const { data } = useQuery(
 				[{ page }, 'key'], 
 				() => fetchFunc(page), 
 				{ suspense: true }
